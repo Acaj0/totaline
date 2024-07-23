@@ -18,7 +18,7 @@ export default function NavBar() {
           <div className="w-[40px]">
             <AspectRatio ratio={6 / 4}>
               <Image
-                src={"/logodigitosite.png"}
+                src={"/duzzi_climatiza.jpeg"}
                 fill
                 alt="logo do site"
                 className="rounded-md object-cover"
