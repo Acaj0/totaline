@@ -5,12 +5,20 @@ export function Fale() {
 
   useEffect(() => {
     const d = new Date();
-    const n = d.getUTCHours() + 1;
-    setIsNight(n > 22 || n < 12);
+    const n = d.getUTCHours() + 1; // Hora local ajustada para UTC
+    const dayOfWeek = d.getDay(); // 0 = domingo, 1 = segunda-feira, ..., 6 = sábado
+
+    // Verificar se é final de semana
+    const isWeekend = dayOfWeek === 0 || dayOfWeek === 6; // Domingo ou sábado
+    // Verificar se é sábado entre 12h e 17h
+    const isSaturdayDaytime = dayOfWeek === 6 && n >= 12 && n <= 17;
+
+    // Definir isNight com base no horário e no fato de ser final de semana
+    setIsNight(!(isWeekend && isSaturdayDaytime) && (n > 22 || n < 12));
   }, []);
 
   return (
-    <div className="flex flex-row cursor-pointer fill-white justify-center items-center mt-5 rounded-lg bg-black w-86 p-2 md:w-96 h-16 gap-4 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300">
+    <div className={`flex flex-row cursor-pointer fill-white justify-center items-center mt-5 rounded-lg bg-black w-86 p-2 md:w-96 h-16 gap-4 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300`}>
       <span className="relative flex h-3 w-3">
         <span className={`animate-ping absolute inline-flex h-full w-full rounded-full ${isNight ? 'bg-red-500' : 'bg-sky-500'} opacity-75`}></span>
         <span className={`relative inline-flex rounded-full h-3 w-3 ${isNight ? 'bg-red-500' : 'bg-sky-500'}`}></span>
