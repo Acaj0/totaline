@@ -10,11 +10,21 @@ export function Fale() {
 
     // Verificar se é final de semana
     const isWeekend = dayOfWeek === 0 || dayOfWeek === 6; // Domingo ou sábado
-    // Verificar se é sábado entre 12h e 17h
-    const isSaturdayDaytime = dayOfWeek === 6 && n >= 12 && n <= 17;
 
-    // Definir isNight com base no horário e no fato de ser final de semana
-    setIsNight(!(isWeekend && isSaturdayDaytime) && (n > 22 || n < 12));
+    // Lógica para definir isNight
+    let nightStatus = false;
+
+    if (isWeekend) {
+      if (dayOfWeek === 6) { // Sábado
+        nightStatus = !(n >= 12 && n <= 17);
+      } else { // Domingo
+        nightStatus = true;
+      }
+    } else { // Segunda a Sexta-feira
+      nightStatus = !(n >= 12 && n <= 22);
+    }
+
+    setIsNight(nightStatus);
   }, []);
 
   return (
