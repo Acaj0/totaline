@@ -16,11 +16,11 @@ export default function NavBar() {
       <div className="bg-white h-12 flex md:hidden justify-between items-center p-2">
         <a href="/">
           <div className="w-[40px]">
-            <AspectRatio ratio={4 / 4}>
+            <AspectRatio ratio={6 / 4}>
               <Image
                 src={"/logodigitosite.png"}
                 fill
-                alt="logo da banda"
+                alt="logo do site"
                 className="rounded-md object-cover"
               />
             </AspectRatio>
@@ -29,11 +29,11 @@ export default function NavBar() {
         <h1 className="italic text-xl text-black">Duzzi</h1> <MobileNav />{" "}
       </div>
 
-      <div className="hidden mx-28 bg-white h-24 md:flex justify-start items-center gap-20 text-xl text-black">
-        <div className="hidden bg-white h-24 md:flex justify-start items-center ml-14 gap-20 text-xl text-black" >
+      <div className="hidden mx-36 bg-white h-28 md:flex justify-between items-center gap-20 text-xl text-black">
+        <div className="hidden bg-white h-24 w-full md:flex justify-between items-center ml-14 gap-20 text-xl text-black">
           <a href="/">
             <div className="w-[150px]">
-              <AspectRatio ratio={4 / 4}>
+              <AspectRatio ratio={6 / 4}>
                 <Image
                   src={"/duzzi_climatiza.jpeg"}
                   fill
@@ -43,8 +43,20 @@ export default function NavBar() {
               </AspectRatio>
             </div>
           </a>
-          <a className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-3xl hover:text-gray-200" href="/">Inicio</a>
-
+          <div className="flex items-center justify-center gap-10">
+            <a
+              className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-3xl hover:text-red-800"
+              href="/"
+            >
+              Inicio
+            </a>
+            <a
+              className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-3xl hover:text-red-800"
+              href="/"
+            >
+              Nossa Historia
+            </a>
+          </div>
         </div>
       </div>
     </div>
