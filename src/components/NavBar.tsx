@@ -45,13 +45,13 @@ export default function NavBar() {
           </a>
           <div className="flex items-center justify-center gap-10">
             <a
-              className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-3xl hover:text-red-800"
+              className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-2xl hover:text-red-800"
               href="/"
             >
               Inicio
             </a>
             <a
-              className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-3xl hover:text-red-800"
+              className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-2xl hover:text-red-800"
               href="/"
             >
               Nossa Historia

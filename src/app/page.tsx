@@ -7,16 +7,13 @@ export default function Home() {
     <main className="">
       <NavBar></NavBar>
       <div className="">
-        <div className="flex lg:flex-row flex-col min-w-fill h-[700px] md:bg-[url(/loja.png)] bg-no-repeat bg-cover bg-top">
-          <div className="flex flex-col ">
+        <div className="flex lg:flex-row flex-col min-w-fill h-[600px] md:bg-[url(/duzzi.png)] border-4 aspect-[24/9] border-black bg-no-repeat bg-cover bg-center">
+          <div className="flex flex-col items-end">
             <div className="flex text-center w-screen justify-center items-center">
-              <h1 className="text-8xl font-sans text-white drop-shadow-2xl backdrop-blur-md rounded-md p-2">
-                A maior do estado do Mato Grosso!
-              </h1>
             </div>
-            <div className="bg-black mx-36 mt-5 w-[600px] h-[700px] text-black justify-center text-center pt-1 px-1">
-              <div className="bg-white min-w-full min-h-full p-5">
-                <h2 className="text-2xl font-sans text-left mx-5 text-balance">
+            <div className="bg-black mx-20 mt-[32px] w-[500px] h-[700px] text-black flex text-center pt-1 px-1">
+              <div className="bg-white min-w-full h-[560px] p-5 flex flex-col items-center">
+                <h2 className="text-xl font-sans text-justify mx-5 text-balance ">
                   Descubra nossa ampla variedade de ar condicionados de alta
                   eficiência energética e desempenho superior. Seja para
                   enfrentar os dias mais quentes ou garantir um clima agradável
@@ -24,13 +21,11 @@ export default function Home() {
                   de ponta e marcas renomadas, oferecemos produtos que combinam
                   conforto, economia e sustentabilidade.
                 </h2>
-                <h1 className="mt-5">
-                  __________________________________________________________
-                </h1>
+                <div className="h-1 rounded-md w-[400px] border boder-black mt-8 bg-black/100 text-white">1</div>
                 <h2 className="text-2xl mt-5">
                   Revenda Oficial das maiores do mercado.
                 </h2>
-                <div className="flex justify-center gap-6 mt-5">
+                <div className="flex justify-center gap-6 mt-8">
                   <div className="w-[100px]">
                     <AspectRatio ratio={10 / 4}>
                       <Image
@@ -42,7 +37,7 @@ export default function Home() {
                     </AspectRatio>
                   </div>
                   <div className="w-[100px]">
-                    <AspectRatio ratio={10 / 4}>
+                    <AspectRatio ratio={8/ 4}>
                       <Image
                         src={"/gree.png"}
                         fill
@@ -52,7 +47,7 @@ export default function Home() {
                     </AspectRatio>
                   </div>
                   <div className="w-[100px]">
-                    <AspectRatio ratio={10 / 4}>
+                    <AspectRatio ratio={7 / 4}>
                       <Image
                         src={"/elgin.png"}
                         fill
@@ -62,7 +57,7 @@ export default function Home() {
                     </AspectRatio>
                   </div>
                   <div className="w-[100px]">
-                    <AspectRatio ratio={10 / 4}>
+                    <AspectRatio ratio={9 / 4}>
                       <Image
                         src={"/fuji.png"}
                         fill
@@ -72,6 +67,16 @@ export default function Home() {
                     </AspectRatio>
                   </div>
                 </div>
+                <div className="w-[200px] mt-3">
+                    <AspectRatio ratio={10 / 4}>
+                      <Image
+                        src={"/total.jpg"}
+                        fill
+                        alt="logo da loja"
+                        className="rounded-md object-cover"
+                      />
+                    </AspectRatio>
+                  </div>
               </div>
             </div>
           </div>
