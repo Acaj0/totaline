@@ -95,7 +95,7 @@ export default function Home() {
                   <Image
                     src={"/ar.jpg"}
                     fill
-                    alt="logo da loja"
+                    alt="foto do ar"
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
@@ -121,7 +121,7 @@ export default function Home() {
                   <Image
                     src={"/peca.jpg"}
                     fill
-                    alt="logo da loja"
+                    alt="pecas"
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
@@ -147,7 +147,7 @@ export default function Home() {
                   <Image
                     src={"/clima.jpg"}
                     fill
-                    alt="logo da loja"
+                    alt="climatizador"
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
