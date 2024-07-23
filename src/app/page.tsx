@@ -90,7 +90,7 @@ export default function Home() {
             {" "}
             <div className="flex flex-col items-center">
               Ar condicionado
-              <div className="relative w-[150px] mt-3 flex transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer">
+              <div className="relative w-[150px]  mt-3 flex transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer">
                 <AspectRatio ratio={4 / 4}>
                   <Image
                     src={"/ar.jpg"}
@@ -100,12 +100,12 @@ export default function Home() {
                   />
                   
                 </AspectRatio>
-                <div className="absolute invisible hover:visible flex w-full h-10 p-2 bg-black">
-                    <a className="text-white md:text-xs text-sm">
-                      Fale conosco
+                <div className="absolute fill-white hover:visible flex flex-row gap-2 justify-center w-full h-128 p-2 bg-black">
+                    <a className="text-white md:text-xs text-xs">
+                      Fale Conosco
                     </a>
                     <svg
-                      className="w-6"
+                      className="w-4"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 448 512"
                     >
