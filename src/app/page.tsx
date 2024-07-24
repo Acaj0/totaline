@@ -12,7 +12,7 @@ export default function Home() {
         <div className="flex lg:flex-row md:justify-end flex-col md:h-[600px] mx-1 lg:bg-[url(/aa.png)] bg-[url(/aa_mobile.png)] border-4 border-black bg-no-repeat bg-cover bg-center">
           <div className="flex flex-col">
             <div className="invisible lg:visible bg-black md:mx-20  mt-[32px] md:w-[500px] md:h-[560px] text-black flex text-center pt-1 px-1">
-              <div className="bg-white min-w-full h-[760px] p-5 flex flex-col items-center">
+              <div className="bg-white min-w-full h-[600px] p-5 flex flex-col items-center">
                 <h2 className="text-xl font-sans text-justify mx-5 text-balance ">
                   Descubra nossa ampla variedade de ar condicionados de alta
                   eficiência energética e desempenho superior. Seja para
