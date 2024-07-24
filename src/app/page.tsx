@@ -186,12 +186,12 @@ export default function Home() {
             </div>
             <div className="h-36 w-96 items-center justify-center flex">
               {" "}
-              <div className="flex flex-col items-center w-[150px] text-center">
+              <div className="flex flex-col items-center w-[200px] text-center">
                 Peças para Refrigeração e Linha Branca
                 <div className="group relative w-[150px] flex transition ease-in-out delay-50 hover:-translate-y-0 hover:scale-110 duration-300 cursor-pointer">
                   <AspectRatio ratio={4 / 4}>
                     <Image
-                      src={"/peca.jpg"}
+                      src={"/peca3.jpg"}
                       fill
                       alt="pecas"
                       className="rounded-md object-cover"
