@@ -29,10 +29,10 @@ export default function NavBar() {
         <h1 className="italic text-xl text-black">Duzzi</h1> <MobileNav />{" "}
       </div>
 
-      <div className="hidden mx-36 bg-white h-28 md:flex justify-between items-center gap-20 text-xl text-black">
+      <div className="hidden mx-36 bg-white h-24 md:flex justify-between items-center gap-20 text-xl text-black">
         <div className="hidden bg-white h-24 w-full md:flex justify-between items-center ml-14 gap-20 text-xl text-black">
           <a href="/">
-            <div className="w-[150px]">
+            <div className="w-[130px]">
               <AspectRatio ratio={6 / 4}>
                 <Image
                   src={"/duzzi_climatiza.jpeg"}
