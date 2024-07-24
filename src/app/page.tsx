@@ -27,7 +27,7 @@ export default function Home() {
                   Revenda Oficial das maiores do mercado.
                 </h2>
                 <div className="flex justify-center gap-6 mt-8">
-                  <div className="w-[60px]">
+                  <div className="w-[100px]">
                     <AspectRatio ratio={10 / 4}>
                       <Image
                         src={"/midea-logo.png"}
@@ -37,7 +37,7 @@ export default function Home() {
                       />
                     </AspectRatio>
                   </div>
-                  <div className="w-[60px]">
+                  <div className="w-[100px]">
                     <AspectRatio ratio={8 / 4}>
                       <Image
                         src={"/gree.png"}
@@ -47,7 +47,7 @@ export default function Home() {
                       />
                     </AspectRatio>
                   </div>
-                  <div className="w-[60px]">
+                  <div className="w-[100px]">
                     <AspectRatio ratio={7 / 4}>
                       <Image
                         src={"/elgin.png"}
@@ -57,7 +57,7 @@ export default function Home() {
                       />
                     </AspectRatio>
                   </div>
-                  <div className="w-[60px]">
+                  <div className="w-[100px]">
                     <AspectRatio ratio={9 / 4}>
                       <Image
                         src={"/fuji.png"}
@@ -68,7 +68,7 @@ export default function Home() {
                     </AspectRatio>
                   </div>
                 </div>
-                <div className="w-[100px] mt-3">
+                <div className="w-[200px] mt-3">
                   <AspectRatio ratio={10 / 4}>
                     <Image
                       src={"/total.jpg"}
@@ -149,7 +149,7 @@ export default function Home() {
             </AspectRatio>
           </div>
         </div>
-        <div className="flex flex-col items-center mt-5">
+        <div className="flex flex-col items-center mt-5 md:mt-0">
           <div className="h-1 md:hidden rounded-md w-[250px] md:w-[400px] border boder-black bg-black/100 text-white">
             1
           </div>
