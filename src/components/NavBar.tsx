@@ -26,7 +26,7 @@ export default function NavBar() {
             </AspectRatio>
           </div>
         </a>
-        <h1 className="italic text-xl text-black">Duzzi</h1> <MobileNav />{" "}
+        <h1 className="italic text-xl text-black"></h1> <MobileNav />{" "}
       </div>
 
       <div className="hidden mx-36 bg-white h-24 md:flex justify-between items-center gap-20 text-xl text-black">
