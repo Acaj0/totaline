@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="overflow-clip">
       <NavBar></NavBar>
       <div className="">
         <div className="flex lg:flex-row md:justify-end flex-col md:h-[600px] mx-1 lg:bg-[url(/aa.png)] bg-[url(/aa_mobile.png)] border-4 border-black bg-no-repeat bg-cover bg-center">
@@ -149,14 +149,14 @@ export default function Home() {
             </AspectRatio>
           </div>
         </div>
-        <div className="flex flex-col items-center mt-5 md:mt-0">
+        <div className="flex flex-col w-full items-center mt-5 md:mt-0">
           <div className="h-1 md:hidden rounded-md w-[250px] md:w-[400px] border boder-black bg-black/100 text-white">
             1
           </div>
-          <div className=" md:h-48 items-center flex flex-col lg:flex-row justify-center md:mt-10 p-2 gap-20 lg:gap-5">
+          <div className=" md:h-48 w-full items-center flex flex-col lg:flex-row justify-center md:mt-10 p-2 gap-20 lg:gap-5">
             {" "}
             <a></a>
-            <div className="md:h-36 w-96 items-center justify-center flex">
+            <div className="md:h-36 md:w-96 items-center justify-center flex">
               {" "}
               <div className="flex flex-col items-center">
                 Ar condicionado
@@ -186,7 +186,7 @@ export default function Home() {
             </div>
             <div className="h-36 w-96 items-center justify-center flex">
               {" "}
-              <div className="flex flex-col items-center :w-[200px] text-center">
+              <div className="flex flex-col items-center w-[150px] text-center">
                 Peças para Refrigeração e Linha Branca
                 <div className="group relative w-[150px] flex transition ease-in-out delay-50 hover:-translate-y-0 hover:scale-110 duration-300 cursor-pointer">
                   <AspectRatio ratio={4 / 4}>
@@ -242,7 +242,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="h-10 hidden items-end mx-10 md:flex flex-col justify-center bg-white">
+        <div className="h-10 w-full hidden items-end mx-10 md:flex flex-col justify-center bg-white">
           {" "}
           <svg
             className="animate-bounce"
