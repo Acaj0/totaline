@@ -14,10 +14,11 @@ export default function Home() {
             <div className="invisible lg:visible bg-black md:mx-20  mt-[32px] md:w-[500px] md:h-[560px] text-black flex text-center pt-1 px-1">
               <div className="bg-white min-w-full h-[600px] p-5 flex flex-col items-center">
                 <h2 className="text-xl font-sans text-justify mx-5 text-balance ">
-                  Descubra nossa ampla variedade de ar condicionados de alta
-                  eficiência energética e desempenho superior. Seja para
-                  enfrentar os dias mais quentes ou garantir um clima agradável
-                  o ano todo, temos a solução perfeita para você.
+                  Bem-vindo à Duzzi Climatização, líder em climatização e
+                  refrigeração no estado de Mato Grosso, com 10 lojas
+                  estrategicamente localizadas para melhor atendê-lo. Garantimos
+                  um atendimento excepcional e soluções precisas para todas as
+                  suas necessidades.
                 </h2>
                 <Fale></Fale>
                 <div className="h-1 rounded-md w-[250px] md:w-[400px] border boder-black mt-8 bg-black/100 text-white">
@@ -84,10 +85,10 @@ export default function Home() {
         </div>
         <div className="lg:hidden bg-white items-centermin-w-full h-[560px] p-5 flex flex-col items-center">
           <h2 className="text-xl font-sans text-justify mx-5 text-balance ">
-            Descubra nossa ampla variedade de ar condicionados de alta
-            eficiência energética e desempenho superior. Seja para enfrentar os
-            dias mais quentes ou garantir um clima agradável o ano todo, temos a
-            solução perfeita para você.
+            Bem-vindo à Duzzi Climatização, líder em climatização e refrigeração
+            no estado de Mato Grosso, com 10 lojas estrategicamente localizadas
+            para melhor atendê-lo. Garantimos um atendimento excepcional e
+            soluções precisas para todas as suas necessidades.
           </h2>
           <Fale></Fale>
           <div className="h-1 rounded-md w-[250px] md:w-[400px] border boder-black mt-8 bg-black/100 text-white">
