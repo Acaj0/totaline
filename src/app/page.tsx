@@ -9,7 +9,7 @@ export default function Home() {
     <main className="overflow-clip">
       <NavBar></NavBar>
       <div className="">
-        <div className="flex lg:flex-row md:justify-end flex-col md:h-[600px] mx-1 lg:bg-[url(/aa.png)] bg-[url(/aa_mobile.png)] border-4 border-black bg-no-repeat bg-cover bg-center">
+        <div className="flex lg:flex-row md:justify-end flex-col md:h-[600px] mx-1 lg:bg-[url(/aa.png)] bg-[url(/aa_mobile.png)] snap-always snap-mandatory snap-y snap-center border-4 border-black bg-no-repeat bg-cover bg-center">
           <div className="flex flex-col">
             <div className="invisible lg:visible bg-black md:mx-20  mt-[32px] md:w-[500px] md:h-[560px] text-black flex text-center pt-1 px-1">
               <div className="bg-white min-w-full h-[600px] p-5 flex flex-col items-center">
@@ -243,7 +243,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="h-10 w-full hidden items-end mx-10 md:flex flex-col justify-center bg-white">
+        <div className="h-10 w-full hidden items-end mx-10 lg:flex flex-col justify-center bg-white">
           {" "}
           <svg
             className="animate-bounce"
@@ -252,6 +252,11 @@ export default function Home() {
           >
             <path d="M256 464a208 208 0 1 1 0-416 208 208 0 1 1 0 416zM256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM128 256l0 32L256 416 384 288l0-32-80 0 0-128-96 0 0 128-80 0z" />
           </svg>
+        </div>
+        <div className="bg-black h-screen flex p-1 m-1 mt-5">
+          <div className="bg-white h-full flex justify-center w-full snap-y snap-mandatory snap-always snap-center scroll">
+            <h1 className="text-4xl mt-10 italic">Nossa Historia</h1>
+          </div>
         </div>
       </div>
     </main>
