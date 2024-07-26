@@ -6,10 +6,10 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="overflow-clip">
+    <main className="overflow-clip h-screen w-screen snap-mandatory snap-y overflow-x-clip overflow-y-scroll over scroll-smooth duration-1000">
       <NavBar></NavBar>
-      <div className="snap-mandatory snap-y overflow-x-clip overflow-y-scroll over scroll-smooth">
-        <div className="snap-center">
+      <section id="1" className="md:snap-end">
+        <div className="">
           <div className="flex lg:flex-row md:justify-end flex-col md:h-[600px] mx-1 lg:bg-[url(/aa.png)] bg-[url(/aa_mobile.png)] border-4 border-black bg-no-repeat bg-cover bg-center">
             <div className="flex flex-col">
               <div className="invisible lg:visible bg-black md:mx-20  mt-[32px] md:w-[500px] md:h-[560px] text-black flex text-center pt-1 px-1">
@@ -256,12 +256,12 @@ export default function Home() {
             </svg>
           </div>
         </div>
-        <div className="bg-black h-screen flex p-1 m-1 mt-20 md:mt-5 snap-center">
-          <div className="bg-white h-full flex justify-center w-full">
-            <h1 className="text-4xl mt-10 italic">Nossa Historia</h1>
-          </div>
+      </section>
+      <section id="2" className="bg-black h-screen flex p-1 m-1 mt-20 md:mt-5 md:snap-end">
+        <div className="bg-white h-full flex justify-center w-full">
+          <h1 className="text-4xl mt-10 italic">Nossa Historia</h1>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
