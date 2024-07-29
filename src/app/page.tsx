@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="overflow-clip h-screen w-screen snap-mandatory snap-y overflow-x-clip overflow-y-scroll over scroll-smooth duration-1000">
       <NavBar></NavBar>
-      <section id="1" className="md:snap-end">
+      <section id="1" className="md:snap-end overflow-clip">
         <div className="">
           <div className="flex lg:flex-row md:justify-end flex-col md:h-[600px] mx-1 lg:bg-[url(/aa.png)] bg-[url(/aa_mobile.png)] border-4 border-black bg-no-repeat bg-cover bg-center">
             <div className="flex flex-col">
@@ -257,7 +257,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="2" className="bg-black h-screen flex p-1 m-1 mt-20 md:mt-5 md:snap-end">
+      <section id="2" className="overflow-clip bg-black h-screen flex p-1 m-1 mt-20 md:mt-5 md:snap-end">
         <div className="bg-white h-full flex justify-center w-full">
           <h1 className="text-4xl mt-10 italic">Nossa Historia</h1>
         </div>
