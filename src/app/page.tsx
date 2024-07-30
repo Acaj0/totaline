@@ -265,7 +265,7 @@ export default function Home() {
           <h1 className="text-4xl  mt-20 italic">Nossa Historia</h1>
           <div className="items-center flex justify-center h-72 w-[800px]  mt-10">
             <div className="flex justify-center items-center relative gap-6  w-[520px] h-44">
-              <div className="w-[200px] absolute inset-x-0 -rotate-12 inset-y-0 transform transition duration-500 hover:scale-125 hover:z-50 z-0 ">
+              <div className="w-[200px] absolute inset-x-0 -rotate-12 inset-y-0 transform transition ease-in-out duration-700 hover:scale-125 hover:z-50 z-3 ">
                 <AspectRatio ratio={4 / 5}>
                   <Image
                     src={"/a.jpg"}
@@ -275,7 +275,7 @@ export default function Home() {
                   />
                 </AspectRatio>
               </div>
-              <div className="w-[200px] absolute inset-x-40 -inset-y-10 z-10 transform transition duration-500 hover:scale-125 hover:z-50">
+              <div className="w-[200px] absolute inset-x-40 -inset-y-10 z-1 transform transition  ease-in-out duration-700 hover:scale-125 hover:z-10">
                 <AspectRatio ratio={4 / 5}>
                   <Image
                     src={"/b.jpg"}
@@ -285,7 +285,7 @@ export default function Home() {
                   />
                 </AspectRatio>
               </div>
-              <div className="w-[200px] y absolute inset-x-80 rotate-12 inset-y-0 z-20 transform transition duration-500 hover:scale-125 hover:z-50">
+              <div className="w-[200px] y absolute inset-x-80 rotate-12 inset-y-0 z-2 transform ease-in-out transition duration-700 hover:scale-125 hover:z-3">
                 <AspectRatio ratio={4 / 5}>
                   <Image
                     src={"/c.jpg"}
