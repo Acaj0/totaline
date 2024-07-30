@@ -14,7 +14,7 @@ export default function Home() {
             <div className="flex flex-col">
               <div className="invisible lg:visible bg-black md:mx-20  mt-[32px] md:w-[500px] md:h-[560px] text-black flex text-center pt-1 px-1">
                 <div className="bg-white min-w-full h-[600px] p-5 flex flex-col items-center">
-                  <h2 className="text-xl font-sans text-justify mx-5 text-balance ">
+                  <h2 className="text-xl font-sans text-left mx-5 ">
                     Bem-vindo à Duzzi Climatização, líder em climatização e
                     refrigeração no estado de Mato Grosso, com 10 lojas
                     estrategicamente localizadas para melhor atendê-lo.
@@ -257,9 +257,46 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="2" className="overflow-clip bg-black h-screen flex p-1 m-1 mt-20 md:mt-5 md:snap-end">
-        <div className="bg-white h-full flex justify-center w-full">
-          <h1 className="text-4xl mt-10 italic">Nossa Historia</h1>
+      <section
+        id="2"
+        className="overflow-clip bg-white h-screen flex p-1 m-1 mt-20 md:mt-5 md:snap-end"
+      >
+        <div className="bg-white items-center h-full flex flex-col justify-top w-full">
+          <h1 className="text-4xl  mt-20 italic">Nossa Historia</h1>
+          <div className="items-center flex justify-center h-72 w-[800px]  mt-10">
+            <div className="flex justify-center items-center relative gap-6  w-[520px] h-44">
+              <div className="w-[200px] absolute inset-x-0 -rotate-12 inset-y-0 transform transition duration-500 hover:scale-125 hover:z-50 z-0 ">
+                <AspectRatio ratio={4 / 5}>
+                  <Image
+                    src={"/a.jpg"}
+                    fill
+                    alt="Foto"
+                    className="rounded-md object-cover"
+                  />
+                </AspectRatio>
+              </div>
+              <div className="w-[200px] absolute inset-x-40 -inset-y-10 z-10 transform transition duration-500 hover:scale-125 hover:z-50">
+                <AspectRatio ratio={4 / 5}>
+                  <Image
+                    src={"/b.jpg"}
+                    fill
+                    alt="Foto"
+                    className="rounded-md object-cover"
+                  />
+                </AspectRatio>
+              </div>
+              <div className="w-[200px] y absolute inset-x-80 rotate-12 inset-y-0 z-20 transform transition duration-500 hover:scale-125 hover:z-50">
+                <AspectRatio ratio={4 / 5}>
+                  <Image
+                    src={"/c.jpg"}
+                    fill
+                    alt="Foto "
+                    className="rounded-md object-cover"
+                  />
+                </AspectRatio>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
