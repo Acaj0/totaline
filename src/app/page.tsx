@@ -7,7 +7,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="overflow-clip h-screen w-screen snap-mandatory snap-y overflow-x-clip overflow-y-scroll over scroll-smooth duration-1000">
-      <NavBar></NavBar>
       <section id="1" className="md:snap-end overflow-clip">
         <div className="">
           <div className="flex lg:flex-row md:justify-end flex-col md:h-[600px] mx-1 lg:bg-[url(/hor.gif)] bg-[url(/ver.gif)] border-4 border-black bg-no-repeat bg-cover bg-center">
@@ -166,7 +165,7 @@ export default function Home() {
                   <div className="group relative w-[150px] mt-3 flex transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 cursor-pointer">
                     <AspectRatio ratio={4 / 4}>
                       <Image
-                        src={"/ar.jpg"}
+                        src={"/ar2.webp"}
                         fill
                         alt="foto do ar"
                         className="rounded-md object-cover"
@@ -261,11 +260,11 @@ export default function Home() {
         id="2"
         className="overflow-clip bg-white h-screen flex p-1 m-1 mt-20 md:mt-5 md:snap-end"
       >
-        <div className="bg-white items-center h-full flex flex-col justify-top w-full">
+        <div className="bg-white items-center h-full flex flex-col justify-top w-full overflow-clip">
           <h1 className="text-4xl  mt-20 italic">Nossa Historia</h1>
           <div className="items-center flex justify-center h-72 w-[800px]  mt-10">
             <div className="flex justify-center items-center relative gap-6  w-[520px] h-44">
-              <div className="w-[200px] absolute inset-x-0 -rotate-12 inset-y-0 transform transition ease-in-out duration-700 hover:scale-125 hover:z-50 z-3 ">
+              <div className="w-[200px] absolute md:inset-x-0 md:-rotate-12 md:inset-y-0 inset-y-00 transform transition ease-in-out duration-700 hover:scale-125 hover:z-50 z-3 ">
                 <AspectRatio ratio={4 / 5}>
                   <Image
                     src={"/a.jpg"}
@@ -275,7 +274,7 @@ export default function Home() {
                   />
                 </AspectRatio>
               </div>
-              <div className="w-[200px] absolute inset-x-40 -inset-y-10 z-1 transform transition  ease-in-out duration-700 hover:scale-125 hover:z-10">
+              <div className="w-[200px] absolute inset-x-40 md:-inset-y-10 inset-y-32 z-1 transform transition  ease-in-out duration-700 hover:scale-125 hover:z-10">
                 <AspectRatio ratio={4 / 5}>
                   <Image
                     src={"/b.jpg"}
@@ -285,7 +284,7 @@ export default function Home() {
                   />
                 </AspectRatio>
               </div>
-              <div className="w-[200px] y absolute inset-x-80 rotate-12 inset-y-0 z-2 transform ease-in-out transition duration-700 hover:scale-125 hover:z-3">
+              <div className="w-[200px] y absolute md:inset-x-80 md:rotate-12 md:inset-y-0 inset-y-64 z-2 transform ease-in-out transition duration-700 hover:scale-125 hover:z-3">
                 <AspectRatio ratio={4 / 5}>
                   <Image
                     src={"/c.jpg"}
