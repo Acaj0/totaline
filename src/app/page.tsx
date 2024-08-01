@@ -7,9 +7,11 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="overflow-clip h-screen w-screen snap-mandatory snap-y overflow-x-clip overflow-y-scroll over scroll-smooth duration-1000">
+      {" "}
       <section id="1" className="md:snap-end overflow-clip">
+        <NavBar />
         <div className="">
-          <div className="flex lg:flex-row md:justify-end flex-col md:h-[600px] mx-1 lg:bg-[url(/hor.gif)] bg-[url(/ver.gif)] border-4 border-black bg-no-repeat bg-cover bg-center">
+          <div className="flex lg:flex-row md:justify-end flex-col md:h-[600px] mx-1 lg:bg-[url(/hor.gif)] bg-[url(/0731.gif)] border-4 border-black bg-no-repeat bg-cover bg-center">
             <div className="flex flex-col">
               <div className="invisible lg:visible bg-black md:mx-20  mt-[32px] md:w-[500px] md:h-[560px] text-black flex text-center pt-1 px-1">
                 <div className="bg-white min-w-full h-[600px] p-5 flex flex-col items-center">
@@ -84,7 +86,7 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:hidden bg-white items-centermin-w-full h-[560px] p-5 flex flex-col items-center">
-            <h2 className="text-xl font-sans text-justify mx-5 text-balance ">
+            <h2 className="text-xl font-sans mx-5 text-left text-balance">
               Bem-vindo à Duzzi Climatização, líder em climatização e
               refrigeração no estado de Mato Grosso, com 10 lojas
               estrategicamente localizadas para melhor atendê-lo. Garantimos um
@@ -262,8 +264,8 @@ export default function Home() {
       >
         <div className="bg-white items-center h-full flex flex-col justify-top w-full overflow-clip">
           <h1 className="text-4xl  mt-20 italic">Nossa Historia</h1>
-          <div className="items-center flex justify-center h-72 w-[800px]  mt-10">
-            <div className="flex justify-center items-center relative gap-6  w-[520px] h-44">
+          <div className="items-center flex justify-center h-72 md:w-[800px]  mt-10">
+            <div className="flex justify-center items-center relative gap-6 md:w-[520px] h-44">
               <div className="w-[200px] absolute md:inset-x-0 md:-rotate-12 md:inset-y-0 inset-y-00 transform transition ease-in-out duration-700 hover:scale-125 hover:z-50 z-3 ">
                 <AspectRatio ratio={4 / 5}>
                   <Image
@@ -274,7 +276,7 @@ export default function Home() {
                   />
                 </AspectRatio>
               </div>
-              <div className="w-[200px] absolute inset-x-40 md:-inset-y-10 inset-y-32 z-1 transform transition  ease-in-out duration-700 hover:scale-125 hover:z-10">
+              <div className="w-[200px] absolute md:inset-x-40 md:-inset-y-10 inset-y-32 z-1 transform transition  ease-in-out duration-700 hover:scale-125 hover:z-10">
                 <AspectRatio ratio={4 / 5}>
                   <Image
                     src={"/b.jpg"}
