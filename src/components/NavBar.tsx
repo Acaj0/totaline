@@ -12,7 +12,7 @@ import { Button } from "./ui/button";
 
 export default function NavBar() {
   return (
-    <div>
+    <div className="">
       <div className="bg-white h-12 flex md:hidden justify-between items-center p-2">
         <a href="/">
           <div className="w-[40px]">
@@ -29,7 +29,7 @@ export default function NavBar() {
         <h1 className="italic text-xl text-black"></h1> <MobileNav />{" "}
       </div>
 
-      <div className="hidden mx-36 bg-white h-24 md:flex justify-between items-center gap-20 text-xl text-black">
+      <header className="hidden sticky top-0 z-50 mx-36 bg-white h-24 md:flex justify-between items-center gap-20 text-xl text-black">
         <div className="hidden bg-white h-24 w-full md:flex justify-between items-center ml-14 gap-20 text-xl text-black">
           <a href="/">
             <div className="w-[130px]">
@@ -58,7 +58,7 @@ export default function NavBar() {
             </a>
           </div>
         </div>
-      </div>
+      </header>
     </div>
   );
 }
