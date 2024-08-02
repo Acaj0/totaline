@@ -153,7 +153,7 @@ export default function Home() {
               </AspectRatio>
             </div>
           </div>
-          <div className="flex flex-col w-full items-center mt-5 md:mt-0">
+          <div className="flex flex-col w-full items-center mt-20 md:mt-0">
             <div className="h-1 md:hidden rounded-md w-[250px] md:w-[400px] border boder-black bg-black/100 text-white">
               1
             </div>
