@@ -11,7 +11,7 @@ export default function Home() {
       <section id="1" className="md:snap-end overflow-clip">
         <NavBar />
         <div className="">
-          <div className="flex lg:flex-row md:justify-end flex-col md:h-[600px] mx-1 lg:bg-[url(/hor.gif)] bg-[url(/0731.gif)] border-4 border-black bg-no-repeat bg-cover bg-center">
+          <div className="flex lg:flex-row md:justify-end flex-col md:h-[600px] md:mx-1 lg:bg-[url(/hor.gif)] bg-[url(/0731.gif)] border-4 border-black bg-no-repeat bg-cover bg-center">
             <div className="flex flex-col">
               <div className="invisible lg:visible bg-black md:mx-20  mt-[32px] md:w-[500px] md:h-[560px] text-black flex text-center pt-1 px-1">
                 <div className="bg-white min-w-full h-[600px] p-5 flex flex-col items-center">
