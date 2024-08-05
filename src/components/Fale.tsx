@@ -28,12 +28,12 @@ export function Fale() {
   }, []);
 
   return (
-    <div className={`flex flex-row cursor-pointer fill-white justify-center items-center mt-5 rounded-lg bg-black w-86 p-2 md:w-96 h-16 gap-4 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300`}>
+    <div className={`flex flex-row cursor-pointer fill-white justify-center items-center mt-5 rounded-lg bg-black w-86 p-2 md:w-86 h-12 gap-4 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300`}>
       <span className="relative flex h-3 w-3">
         <span className={`animate-ping absolute inline-flex h-full w-full rounded-full ${isNight ? 'bg-red-500' : 'bg-sky-500'} opacity-75`}></span>
         <span className={`relative inline-flex rounded-full h-3 w-3 ${isNight ? 'bg-red-500' : 'bg-sky-500'}`}></span>
       </span>
-      <a className="text-white md:text-xl text-lg">
+      <a className="text-white md:text-lg text-lg">
       Clique aqui para ser atendido!
       </a>
       <svg className="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">

@@ -13,24 +13,27 @@ export default function Home() {
         <div className="">
           <div className="flex lg:flex-row md:justify-end flex-col md:h-[600px] md:mx-1 lg:bg-[url(/hor.gif)] bg-[url(/0731.gif)] border-4 border-black bg-no-repeat bg-cover bg-center">
             <div className="flex flex-col">
-              <div className="invisible lg:visible bg-black md:mx-20  mt-[32px] md:w-[500px] md:h-[560px] text-black flex text-center pt-1 px-1">
+              <div className="invisible lg:visible bg-black md:mx-20  mt-[100px] md:w-[400px] md:h-[496px] text-black flex text-center pt-1 px-1">
                 <div className="bg-white min-w-full h-[600px] p-5 flex flex-col items-center">
-                  <h2 className="text-xl font-sans text-left mx-5 ">
-                    Bem-vindo à Duzzi Climatização, líder em climatização e
-                    refrigeração no estado de Mato Grosso, com 10 lojas
-                    estrategicamente localizadas para melhor atendê-lo.
-                    Garantimos um atendimento excepcional e soluções precisas
-                    para todas as suas necessidades.
-                  </h2>
+                  <div className="w-72">
+                    <AspectRatio ratio={5 / 4}>
+                      <Image
+                        src={"/3.jpeg"}
+                        fill
+                        alt="duzzi a maior do estado"
+                        className="rounded-md object-cover"
+                      />
+                    </AspectRatio>
+                  </div>
                   <Fale></Fale>
-                  <div className="h-1 rounded-md w-[250px] md:w-[400px] border boder-black mt-8 bg-black/100 text-white">
+                  <div className="h-1 rounded-md w-[250px] md:w-[300px] border boder-black mt-8 bg-black/100 text-white">
                     1
                   </div>
-                  <h2 className="text-2xl mt-5">
+                  <h2 className="text-xl mt-5">
                     Revenda Oficial das maiores do mercado.
                   </h2>
-                  <div className="flex justify-center gap-6 mt-8">
-                    <div className="w-[100px]">
+                  <div className="flex justify-center gap-3 mt-2">
+                    <div className="w-[80px]">
                       <AspectRatio ratio={10 / 4}>
                         <Image
                           src={"/midea-logo.png"}
@@ -40,7 +43,7 @@ export default function Home() {
                         />
                       </AspectRatio>
                     </div>
-                    <div className="w-[100px]">
+                    <div className="w-[80px]">
                       <AspectRatio ratio={8 / 4}>
                         <Image
                           src={"/gree.png"}
@@ -50,7 +53,7 @@ export default function Home() {
                         />
                       </AspectRatio>
                     </div>
-                    <div className="w-[100px]">
+                    <div className="w-[80px]">
                       <AspectRatio ratio={7 / 4}>
                         <Image
                           src={"/elgin.png"}
@@ -60,7 +63,7 @@ export default function Home() {
                         />
                       </AspectRatio>
                     </div>
-                    <div className="w-[100px]">
+                    <div className="w-[80px]">
                       <AspectRatio ratio={9 / 4}>
                         <Image
                           src={"/fuji.png"}
@@ -71,28 +74,19 @@ export default function Home() {
                       </AspectRatio>
                     </div>
                   </div>
-                  <div className="w-[200px] mt-3">
-                    <AspectRatio ratio={10 / 4}>
-                      <Image
-                        src={"/total.jpg"}
-                        fill
-                        alt="logo da loja"
-                        className="rounded-md object-cover"
-                      />
-                    </AspectRatio>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="lg:hidden bg-white items-centermin-w-full h-[560px] p-5 flex flex-col items-center">
-            <h2 className="text-xl font-sans mx-5 text-left text-balance">
-              Bem-vindo à Duzzi Climatização, líder em climatização e
-              refrigeração no estado de Mato Grosso, com 10 lojas
-              estrategicamente localizadas para melhor atendê-lo. Garantimos um
-              atendimento excepcional e soluções precisas para todas as suas
-              necessidades.
-            </h2>
+            <AspectRatio ratio={5 / 4}>
+              <Image
+                src={"/3.jpeg"}
+                fill
+                alt="duzzi a maior do estado"
+                className="rounded-md object-cover"
+              />
+            </AspectRatio>
             <Fale></Fale>
             <div className="h-1 rounded-md w-[250px] md:w-[400px] border boder-black mt-8 bg-black/100 text-white">
               1
@@ -141,16 +135,6 @@ export default function Home() {
                   />
                 </AspectRatio>
               </div>
-            </div>
-            <div className="w-[150px] mt-5">
-              <AspectRatio ratio={10 / 4}>
-                <Image
-                  src={"/total.jpg"}
-                  fill
-                  alt="logo da totaline"
-                  className="rounded-md object-cover"
-                />
-              </AspectRatio>
             </div>
           </div>
           <div className="flex flex-col w-full items-center mt-20 md:mt-0">
