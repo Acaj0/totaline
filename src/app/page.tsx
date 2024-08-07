@@ -253,11 +253,11 @@ export default function Home() {
       </section>
       <section
         id="2"
-        className="overflow-clip bg-white h-screen flex p-1 m-1 mt-36 md:mt-5 md:snap-end"
+        className="overflow-clip bg-white h-screen flex p-1 m-1 mt-36 md:mt-5 md:snap-end flex-col"
       >
         <div className="bg-white items-center h-full flex flex-col justify-top w-full overflow-clip">
-          <h1 className="text-4xl  mt-20 italic">Sobre a Duzzi Climatização</h1>
-          <span className="mx-36 mt-10">
+          <h1 className="text-4xl  mt-10 italic">Sobre a Duzzi Climatização</h1>
+          <span className="mx-36 mt-5">
             Fundada em 14 de outubro de 2003 por Claudio Zafalon e seu filho
             Claudio Zafalon Filho, a Duzzi Climatização nasceu para atender uma
             necessidade crescente de soluções térmicas e de climatização no
@@ -306,7 +306,7 @@ export default function Home() {
               <div className="w-[200px] absolute md:inset-x-0 md:-rotate-12 md:inset-y-0 inset-y-00 transform transition ease-in-out duration-700 hover:scale-125 hover:z-50 z-3 ">
                 <AspectRatio ratio={4 / 5}>
                   <Image
-                    src={"/a.jpg"}
+                    src={"/foto.jpeg"}
                     fill
                     alt="Foto"
                     className="rounded-md object-cover"
@@ -316,7 +316,7 @@ export default function Home() {
               <div className="w-[200px] absolute md:inset-x-40 md:-inset-y-10 inset-y-32 z-1 transform transition  ease-in-out duration-700 hover:scale-125 hover:z-10">
                 <AspectRatio ratio={4 / 5}>
                   <Image
-                    src={"/b.jpg"}
+                    src={"/foto2.jpeg"}
                     fill
                     alt="Foto"
                     className="rounded-md object-cover"
@@ -326,7 +326,7 @@ export default function Home() {
               <div className="w-[200px] y absolute md:inset-x-80 md:rotate-12 md:inset-y-0 inset-y-64 z-2 transform ease-in-out transition duration-700 hover:scale-125 hover:z-3">
                 <AspectRatio ratio={4 / 5}>
                   <Image
-                    src={"/c.jpg"}
+                    src={"/foto3.jpeg"}
                     fill
                     alt="Foto "
                     className="rounded-md object-cover"
@@ -337,6 +337,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <footer className="bg-black/95 h-48 w-full overflow-clip flex mt-5 md:mt-5 md:snap-end flex-col"></footer>
     </main>
   );
 }
