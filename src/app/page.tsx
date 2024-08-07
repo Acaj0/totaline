@@ -253,11 +253,11 @@ export default function Home() {
       </section>
       <section
         id="2"
-        className="overflow-clip bg-white h-screen flex p-1 m-1 mt-36 md:mt-5 md:snap-end flex-col"
+        className="overflow-clip bg-white md:h-screen flex p-1 m-1 mt-36 md:mt-5 md:snap-end flex-col"
       >
         <div className="bg-white items-center h-full flex flex-col justify-top w-full overflow-clip">
-          <h1 className="text-4xl  mt-10 italic">Sobre a Duzzi Climatização</h1>
-          <span className="mx-36 mt-5">
+          <h1 className="text-4xl  mt-10 italic text-center">Sobre a Duzzi Climatização</h1>
+          <span className="md:mx-36 mt-5">
             Fundada em 14 de outubro de 2003 por Claudio Zafalon e seu filho
             Claudio Zafalon Filho, a Duzzi Climatização nasceu para atender uma
             necessidade crescente de soluções térmicas e de climatização no
@@ -265,7 +265,7 @@ export default function Home() {
             referência no setor, oferecendo uma ampla gama de produtos e
             serviços.
           </span>
-          <span className="mx-36 mt-5">
+          <span className="md:mx-36 mt-5">
             Especializamos-nos na venda de ar condicionado e materiais para sua
             instalação, além de peças para máquinas de lavar, climatizadores a
             base d’água, câmaras frias, peças e materiais para manutenção de
@@ -279,14 +279,14 @@ export default function Home() {
             Carrier, Suryha, Tecumseh, Tectape, Testo do Brasil, Trineva, Uni
             Refrigeração, Vathisa e Vulkan.
           </span>
-          <span className="mx-36 mt-5">
+          <span className="md:mx-36 mt-5">
             Contamos com mais de 80 funcionários dedicados, e somos uma empresa
             familiar que valoriza profundamente o atendimento ao cliente. Nossos
             vendedores possuem amplo conhecimento técnico, garantindo um
             atendimento ágil e sem complicações. Nos orgulhamos de oferecer
             preços competitivos e um serviço especializado e humanizado.
           </span>
-          <span className="mx-36 mt-5">
+          <span className="md:mx-36 mt-5">
             A Duzzi Climatização já foi reconhecida pela Midea Carrier como
             exemplo de parceiro da marca, evidenciando nosso compromisso com a
             qualidade e a excelência. Atendemos principalmente técnicos de
@@ -297,7 +297,7 @@ export default function Home() {
             aprimorar nosso atendimento e oferecer as melhores soluções para
             nossos clientes.
           </span>
-          <span className="mx-36 mt-10">
+          <span className="md:mx-36 mt-10">
             Venha nos conhecer e descubra por que a Duzzi Climatização é a
             escolha certa para suas necessidades de climatização e refrigeração.
           </span>
