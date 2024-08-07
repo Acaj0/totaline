@@ -68,18 +68,164 @@ export default function NavBar() {
             </a>
             <a className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-2xl hover:text-blue-800">
               <Drawer>
-                <DrawerTrigger>Lojas E Fornecedores</DrawerTrigger>
+                <DrawerTrigger>Fornecedores</DrawerTrigger>
                 <DrawerContent>
                   <DrawerHeader>
-                    <DrawerTitle>Are you absolutely sure?</DrawerTitle>
+                    <DrawerTitle className="items-center text-center">Abaixo todos os nossos Fornecedores</DrawerTitle>
                     <DrawerDescription>
-                      This action cannot be undone.
+                      <div className="flex justify-center gap-3 grid-cols-4 mt-10">
+                        <div className="w-[100px]">
+                          <AspectRatio ratio={10 / 4}>
+                            <Image
+                              src={"/midea-logo.png"}
+                              fill
+                              alt="logo da loja"
+                              className="rounded-md object-cover"
+                            />
+                          </AspectRatio>
+                        </div>
+                        <div className="w-[100px]">
+                          <AspectRatio ratio={8 / 4}>
+                            <Image
+                              src={"/gree.png"}
+                              fill
+                              alt="logo da loja"
+                              className="rounded-md object-cover"
+                            />
+                          </AspectRatio>
+                        </div>
+                        <div className="w-[100px]">
+                          <AspectRatio ratio={7 / 4}>
+                            <Image
+                              src={"/elgin.png"}
+                              fill
+                              alt="logo da loja"
+                              className="rounded-md object-cover"
+                            />
+                          </AspectRatio>
+                        </div>
+                        <div className="w-[100px]">
+                          <AspectRatio ratio={9 / 4}>
+                            <Image
+                              src={"/fuji.png"}
+                              fill
+                              alt="logo da loja"
+                              className="rounded-md object-cover"
+                            />
+                          </AspectRatio>
+                        </div>
+                      </div>
+                      <div className="flex justify-center gap-3 mt-2 grid-cols-4">
+                        <div className="w-[100px]">
+                          <AspectRatio ratio={10 / 4}>
+                            <Image
+                              src={"/1.png"}
+                              fill
+                              alt="logo da loja"
+                              className="rounded-md object-cover"
+                            />
+                          </AspectRatio>
+                        </div>
+                        <div className="w-[100px]">
+                          <AspectRatio ratio={8 / 4}>
+                            <Image
+                              src={"/2.png"}
+                              fill
+                              alt="logo da loja"
+                              className="rounded-md object-cover"
+                            />
+                          </AspectRatio>
+                        </div>
+                        <div className="w-[100px]">
+                          <AspectRatio ratio={6 / 4}>
+                            <Image
+                              src={"/5.png"}
+                              fill
+                              alt="logo da loja"
+                              className="rounded-md object-cover"
+                            />
+                          </AspectRatio>
+                        </div>
+                        <div className="w-[100px]">
+                          <AspectRatio ratio={9 / 4}>
+                            <Image
+                              src={"/6.png"}
+                              fill
+                              alt="logo da loja"
+                              className="rounded-md object-cover"
+                            />
+                          </AspectRatio>
+                        </div>
+                      </div>
+                      <div className="flex justify-center gap-3 mt-2 grid-cols-4">
+                        <div className="w-[100px]">
+                          <AspectRatio ratio={10 / 4}>
+                            <Image
+                              src={"/7.png"}
+                              fill
+                              alt="logo da loja"
+                              className="rounded-md object-cover"
+                            />
+                          </AspectRatio>
+                        </div>
+                        <div className="w-[100px]">
+                          <AspectRatio ratio={8 / 4}>
+                            <Image
+                              src={"/8.png"}
+                              fill
+                              alt="logo da loja"
+                              className="rounded-md object-cover"
+                            />
+                          </AspectRatio>
+                        </div>
+                        <div className="w-[100px]">
+                          <AspectRatio ratio={6 / 4}>
+                            <Image
+                              src={"/9.png"}
+                              fill
+                              alt="logo da loja"
+                              className="rounded-md object-cover"
+                            />
+                          </AspectRatio>
+                        </div>
+                        <div className="w-[100px]">
+                          <AspectRatio ratio={9 / 4}>
+                            <Image
+                              src={"/11.png"}
+                              fill
+                              alt="logo da loja"
+                              className="rounded-md object-cover"
+                            />
+                          </AspectRatio>
+                        </div>
+                      </div>
+                      <div className="flex justify-center gap-3 mt-2 grid-cols-4">
+                        <div className="w-[100px]">
+                          <AspectRatio ratio={10 / 4}>
+                            <Image
+                              src={"/12.png"}
+                              fill
+                              alt="logo da loja"
+                              className="rounded-md object-cover"
+                            />
+                          </AspectRatio>
+                        </div>
+                        <div className="w-[100px]">
+                          <AspectRatio ratio={8 / 4}>
+                            <Image
+                              src={"/13.png"}
+                              fill
+                              alt="logo da loja"
+                              className="rounded-md object-cover"
+                            />
+                          </AspectRatio>
+                        </div>
+                      </div>
                     </DrawerDescription>
                   </DrawerHeader>
                   <DrawerFooter>
-                    <Button>Submit</Button>
                     <DrawerClose>
-                      <Button variant="outline">Cancel</Button>
+                      <Button variant="outline">Fechar</Button>
                     </DrawerClose>
                   </DrawerFooter>
                 </DrawerContent>
