@@ -33,7 +33,7 @@ export function Fale() {
         <span className={`animate-ping absolute inline-flex h-full w-full rounded-full ${isNight ? 'bg-red-500' : 'bg-sky-500'} opacity-75`}></span>
         <span className={`relative inline-flex rounded-full h-3 w-3 ${isNight ? 'bg-red-500' : 'bg-sky-500'}`}></span>
       </span>
-      <a className="text-white md:text-lg text-lg">
+      <a className="text-white md:text-lg text-lg" href="https://api.whatsapp.com/send?phone=556593333739">
       Clique aqui para ser atendido!
       </a>
       <svg className="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">

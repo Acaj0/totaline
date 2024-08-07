@@ -158,7 +158,10 @@ export default function Home() {
                       />
                     </AspectRatio>
                     <div className="absolute bottom-1 fill-white hidden group-hover:flex flex-row gap-2 justify-center w-full h-8 p-2 bg-black ease-in-out group-hover:-translate-y-0 transition duration-700">
-                      <a className="text-white md:text-xs text-xs">
+                      <a
+                        className="text-white md:text-xs text-xs"
+                        href="https://api.whatsapp.com/send?phone=556593333739"
+                      >
                         Fale Conosco
                       </a>
                       <svg
@@ -186,7 +189,10 @@ export default function Home() {
                       />
                     </AspectRatio>
                     <div className="absolute bottom-1 fill-white hidden group-hover:flex flex-row gap-2 justify-center w-full h-8 p-2 bg-black ease-in-out group-hover:-translate-y-2 transition duration-700">
-                      <a className="text-white md:text-xs text-xs">
+                      <a
+                        className="text-white md:text-xs text-xs "
+                        href="https://api.whatsapp.com/send?phone=556593333739"
+                      >
                         Fale Conosco
                       </a>
                       <svg
@@ -214,7 +220,10 @@ export default function Home() {
                       />
                     </AspectRatio>
                     <div className="absolute bottom-1 fill-white hidden group-hover:flex flex-row gap-2 justify-center w-full h-8 p-2 bg-black ease-in-out group-hover:-translate-y-0 transition duration-700">
-                      <a className="text-white md:text-xs text-xs">
+                      <a
+                        className="text-white md:text-xs text-xs"
+                        href="https://api.whatsapp.com/send?phone=556593333739"
+                      >
                         Fale Conosco
                       </a>
                       <svg
@@ -254,31 +263,41 @@ export default function Home() {
             necessidade crescente de soluções térmicas e de climatização no
             mercado. Com o passar dos anos, a empresa se consolidou como uma
             referência no setor, oferecendo uma ampla gama de produtos e
-            serviços. Especializamos-nos na venda de ar condicionado e materiais
-            para sua instalação, além de peças para máquinas de lavar,
-            climatizadores a base d’água, câmaras frias, peças e materiais para
-            manutenção de geladeiras e freezers, e diversas ferramentas.
-            Trabalhamos com marcas renomadas como Age Therm, Alado, Amatools,
-            Aquabios, Black & Decker, Bosch, Braskoki, Brastemp, Consul,
-            Controlbox, Copeland, CP Placas, Danfoss, Day Brasil, Electrolux,
-            Elgin, Elitech, Embraco, Emicol, EOS, Extruflex, Famabras, Foxlux,
-            Fujitsu, Full Gauge, Gree, Hulter, Indusat, JRC Diamantados, K11,
-            Leco do Brasil, Mastercool, Midea, Migrare, Minipa, MOR, Performance
-            Ind., Quimital, Springer Carrier, Suryha, Tecumseh, Tectape, Testo
-            do Brasil, Trineva, Uni Refrigeração, Vathisa e Vulkan. Contamos com
-            mais de 80 funcionários dedicados, e somos uma empresa familiar que
-            valoriza profundamente o atendimento ao cliente. Nossos vendedores
-            possuem amplo conhecimento técnico, garantindo um atendimento ágil e
-            sem complicações. Nos orgulhamos de oferecer preços competitivos e
-            um serviço especializado e humanizado. A Duzzi Climatização já foi
-            reconhecida pela Midea Carrier como exemplo de parceiro da marca,
-            evidenciando nosso compromisso com a qualidade e a excelência.
-            Atendemos principalmente técnicos de refrigeração, mas também
-            oferecemos nossas soluções para a população em geral. Começamos com
-            uma pequena loja e hoje temos 10 pontos de venda espalhados pelo
-            Mato Grosso, com a tendência de crescer cada vez mais. Nosso
-            objetivo é continuar expandindo, sempre buscando aprimorar nosso
-            atendimento e oferecer as melhores soluções para nossos clientes.
+            serviços.
+          </span>
+          <span className="mx-36 mt-5">
+            Especializamos-nos na venda de ar condicionado e materiais para sua
+            instalação, além de peças para máquinas de lavar, climatizadores a
+            base d’água, câmaras frias, peças e materiais para manutenção de
+            geladeiras e freezers, e diversas ferramentas. Trabalhamos com
+            marcas renomadas como Age Therm, Alado, Amatools, Aquabios, Black &
+            Decker, Bosch, Braskoki, Brastemp, Consul, Controlbox, Copeland, CP
+            Placas, Danfoss, Day Brasil, Electrolux, Elgin, Elitech, Embraco,
+            Emicol, EOS, Extruflex, Famabras, Foxlux, Fujitsu, Full Gauge, Gree,
+            Hulter, Indusat, JRC Diamantados, K11, Leco do Brasil, Mastercool,
+            Midea, Migrare, Minipa, MOR, Performance Ind., Quimital, Springer
+            Carrier, Suryha, Tecumseh, Tectape, Testo do Brasil, Trineva, Uni
+            Refrigeração, Vathisa e Vulkan.
+          </span>
+          <span className="mx-36 mt-5">
+            Contamos com mais de 80 funcionários dedicados, e somos uma empresa
+            familiar que valoriza profundamente o atendimento ao cliente. Nossos
+            vendedores possuem amplo conhecimento técnico, garantindo um
+            atendimento ágil e sem complicações. Nos orgulhamos de oferecer
+            preços competitivos e um serviço especializado e humanizado.
+          </span>
+          <span className="mx-36 mt-5">
+            A Duzzi Climatização já foi reconhecida pela Midea Carrier como
+            exemplo de parceiro da marca, evidenciando nosso compromisso com a
+            qualidade e a excelência. Atendemos principalmente técnicos de
+            refrigeração, mas também oferecemos nossas soluções para a população
+            em geral. Começamos com uma pequena loja e hoje temos 10 pontos de
+            venda espalhados pelo Mato Grosso, com a tendência de crescer cada
+            vez mais. Nosso objetivo é continuar expandindo, sempre buscando
+            aprimorar nosso atendimento e oferecer as melhores soluções para
+            nossos clientes.
+          </span>
+          <span className="mx-36 mt-10">
             Venha nos conhecer e descubra por que a Duzzi Climatização é a
             escolha certa para suas necessidades de climatização e refrigeração.
           </span>
