@@ -11,7 +11,7 @@ export default function Home() {
       <section id="1" className="md:snap-end overflow-clip">
         <NavBar />
         <div className="">
-          <div className="flex lg:flex-row md:justify-end flex-col md:h-[600px] md:mx-1 lg:bg-[url(/hor.gif)] bg-[url(/0731.gif)] border-4 border-black bg-no-repeat bg-cover bg-center">
+          <div className="flex lg:flex-row md:justify-end flex-col md:h-[600px] lg:bg-[url(/hor.gif)] bg-[url(/0731.gif)] border-4 border-black bg-no-repeat bg-cover bg-center">
             <div className="flex flex-col">
               <div className="invisible lg:visible bg-black md:mx-20  mt-[100px] md:w-[400px] md:h-[496px] text-black flex text-center pt-1 px-1">
                 <div className="bg-white min-w-full h-[600px] p-5 flex flex-col items-center">
@@ -244,10 +244,44 @@ export default function Home() {
       </section>
       <section
         id="2"
-        className="overflow-clip bg-white h-screen flex p-1 m-1 mt-20 md:mt-5 md:snap-end"
+        className="overflow-clip bg-white h-screen flex p-1 m-1 mt-36 md:mt-5 md:snap-end"
       >
         <div className="bg-white items-center h-full flex flex-col justify-top w-full overflow-clip">
-          <h1 className="text-4xl  mt-20 italic">Nossa Historia</h1>
+          <h1 className="text-4xl  mt-20 italic">Sobre a Duzzi Climatização</h1>
+          <span className="mx-36 mt-10">
+            Fundada em 14 de outubro de 2003 por Claudio Zafalon e seu filho
+            Claudio Zafalon Filho, a Duzzi Climatização nasceu para atender uma
+            necessidade crescente de soluções térmicas e de climatização no
+            mercado. Com o passar dos anos, a empresa se consolidou como uma
+            referência no setor, oferecendo uma ampla gama de produtos e
+            serviços. Especializamos-nos na venda de ar condicionado e materiais
+            para sua instalação, além de peças para máquinas de lavar,
+            climatizadores a base d’água, câmaras frias, peças e materiais para
+            manutenção de geladeiras e freezers, e diversas ferramentas.
+            Trabalhamos com marcas renomadas como Age Therm, Alado, Amatools,
+            Aquabios, Black & Decker, Bosch, Braskoki, Brastemp, Consul,
+            Controlbox, Copeland, CP Placas, Danfoss, Day Brasil, Electrolux,
+            Elgin, Elitech, Embraco, Emicol, EOS, Extruflex, Famabras, Foxlux,
+            Fujitsu, Full Gauge, Gree, Hulter, Indusat, JRC Diamantados, K11,
+            Leco do Brasil, Mastercool, Midea, Migrare, Minipa, MOR, Performance
+            Ind., Quimital, Springer Carrier, Suryha, Tecumseh, Tectape, Testo
+            do Brasil, Trineva, Uni Refrigeração, Vathisa e Vulkan. Contamos com
+            mais de 80 funcionários dedicados, e somos uma empresa familiar que
+            valoriza profundamente o atendimento ao cliente. Nossos vendedores
+            possuem amplo conhecimento técnico, garantindo um atendimento ágil e
+            sem complicações. Nos orgulhamos de oferecer preços competitivos e
+            um serviço especializado e humanizado. A Duzzi Climatização já foi
+            reconhecida pela Midea Carrier como exemplo de parceiro da marca,
+            evidenciando nosso compromisso com a qualidade e a excelência.
+            Atendemos principalmente técnicos de refrigeração, mas também
+            oferecemos nossas soluções para a população em geral. Começamos com
+            uma pequena loja e hoje temos 10 pontos de venda espalhados pelo
+            Mato Grosso, com a tendência de crescer cada vez mais. Nosso
+            objetivo é continuar expandindo, sempre buscando aprimorar nosso
+            atendimento e oferecer as melhores soluções para nossos clientes.
+            Venha nos conhecer e descubra por que a Duzzi Climatização é a
+            escolha certa para suas necessidades de climatização e refrigeração.
+          </span>
           <div className="items-center flex justify-center h-72 md:w-[800px]  mt-10">
             <div className="flex justify-center items-center relative gap-6 md:w-[520px] h-44">
               <div className="w-[200px] absolute md:inset-x-0 md:-rotate-12 md:inset-y-0 inset-y-00 transform transition ease-in-out duration-700 hover:scale-125 hover:z-50 z-3 ">
