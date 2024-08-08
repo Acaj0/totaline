@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Duzzi Climatização
 
-## Getting Started
+**Duzzi Climatização** é um projeto para A empresa de climatização de cuiaba, lider de mercado e referencia na região
 
-First, run the development server:
+## Índice
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Sobre](#sobre)
+- [Tecnologias](#tecnologias)
+- [Instalação](#instalação)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Sobre
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+O Site é uma aplicação desenvolvida para ser uma plataforma de apresentação para a empresa. O objetivo principal do projeto é mostar a empresa e oferecer uma possibilidade de conexão por whatsapp para o cliente.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Tecnologias
 
-## Learn More
+- Next.js
+- Tailwind
+- Typescript
 
-To learn more about Next.js, take a look at the following resources:
+## Instalação
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Acaj0/totaline.git
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Rode o Site:
+4. ```bash
+   npm run dev
+   ```
