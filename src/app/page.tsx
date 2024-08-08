@@ -88,10 +88,8 @@ export default function Home() {
               />
             </AspectRatio>
             <Fale></Fale>
-            <div className="h-1 rounded-md w-[250px] md:w-[400px] border boder-black mt-8 bg-black/100 text-white">
-              1
-            </div>
-            <h2 className="text-2xl mt-5 text-center">
+
+            <h2 className="text-2xl mt-20 text-center">
               Revenda Oficial das maiores do mercado.
             </h2>
             <div className="flex justify-center gap-6 mt-8">
@@ -250,10 +248,13 @@ export default function Home() {
             </svg>
           </div>
         </div>
+        <div className="h-1 mx-20 rounded-md w-[250px] md:w-[400px] border boder-black mt-20 bg-black/100 text-white">
+          1
+        </div>
       </section>
       <section
         id="2"
-        className="overflow-clip bg-white md:h-screen flex p-1 m-1 mt-36 md:mt-5 md:snap-end flex-col"
+        className="overflow-clip bg-white md:h-screen flex p-1 m-1 mt-10 md:mt-5 md:snap-end flex-col"
       >
         <div className="bg-white items-center p-1 flex flex-col justify-top w-full overflow- ">
           <h1 className="text-4xl  mt-10 italic text-center overflow-clip">
@@ -388,7 +389,7 @@ export default function Home() {
                 <h4>(65)3029-2329</h4>
               </div>
             </div>
-            <div className="mt-10 flex-row flex gap-5">
+            <div className="mt-10 mb-5 flex-row flex gap-5">
               <a href="https://www.instagram.com/duzziclimatizacao?igsh=MXVncHJrdXZ2MWJ3ag%3D%">
                 <svg
                   className="w-10 transition ease-in-out delay-50 hover:-translate-y-0 hover:scale-110 duration-300 cursor-pointer"
