@@ -248,7 +248,7 @@ export default function Home() {
             </svg>
           </div>
         </div>
-        <div className="h-1 mx-20 rounded-md w-[250px] md:w-[400px] border boder-black mt-20 bg-black/100 text-white">
+        <div className="md:hidden h-1 mx-20 rounded-md w-[250px] md:w-[400px] border boder-black mt-20 bg-black/100 text-white">
           1
         </div>
       </section>
