@@ -27,7 +27,7 @@ export default function Home() {
                   </div>
                   <Fale></Fale>
                   <div className="h-1 rounded-md w-[250px] md:w-[300px] border boder-black mt-8 bg-black/100 text-white">
-                    1
+                    -
                   </div>
                   <h2 className="text-xl mt-5">
                     Revenda Oficial das maiores do mercado.
