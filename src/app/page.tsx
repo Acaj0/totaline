@@ -204,7 +204,7 @@ export default function Home() {
                   </div>{" "}
                 </div>
               </div>
-              <div className="h-36 w-96 items-center justify-center flex">
+              <div className="hidden h-36 w-96 items-center justify-center flex">
                 {" "}
                 <div className="flex flex-col items-center md:mt-0 mt-10">
                   Climatizadores de Ar
