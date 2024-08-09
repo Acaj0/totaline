@@ -357,10 +357,10 @@ export default function Home() {
         <div className="md:w-[1500px] md:h-36 items-center justify-center flex bg-white">
           <div className=" bg-black/95 text-white h-full w-full">
             <h1 className="text-2xl mt-5">Nossas Lojas</h1>
-            <div className="grid p-1 grid-flow-row grid-cols-1 md:grid-rows-2 md:grid-cols-3">
+            <div className="grid p-1 grid-flow-row grid-cols-1 md:grid-rows-2 md:grid-cols-4">
               <div>
                 <h2 className="mt-5">Duzzi Refrigeração - Matriz</h2>
-                <h3>Av. Miguel Sutil, 2265 - Areão, Cuiabá - MT, 78010-500</h3>
+                <h3>Av. Miguel Sutil, 2265 - Areão, Cuiabá - MT</h3>
                 <h4>(65)3624-1990</h4>
               </div>
               <div>
@@ -387,6 +387,21 @@ export default function Home() {
                 <h2 className="mt-5">Duzzi Refrigeração - Várzea Grande</h2>
                 <h3>Av. Gov. Júlio Campos, 3033, Jd Gloria I. Várzea Grande</h3>
                 <h4>(65)3029-2329</h4>
+              </div>
+              <div>
+                <h2 className="mt-5">
+                  Duzzi Refrigeração - Primavera do Leste
+                </h2>
+                <h3>
+                  Endereço Primavera. Rua Guanabara N. 520 Centro, Primavera do Leste - MT
+                </h3>
+                <h4>(66)3497-3540</h4>
+              </div>
+              <div>
+                <h2 className="mt-5">Duzzi Refrigeração - Campo Verde </h2>
+                <h3>Av. Sen Antônio Fobtana S/N 
+                Jardim C. verde, Campo Verde - MT</h3>
+                <h4>(66)99982-2726</h4>
               </div>
             </div>
             <div className="mt-10 mb-5 flex-row flex gap-5">
