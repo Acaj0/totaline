@@ -137,7 +137,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col w-full items-center mt-20 md:mt-0">
             <div className="h-1 md:hidden rounded-md w-[250px] md:w-[400px] border boder-black bg-black/100 text-white">
-              1
+              -
             </div>
             <div className=" md:h-48 w-full items-center flex flex-col lg:flex-row justify-center md:mt-10 p-2 gap-20 lg:gap-5">
               {" "}
@@ -204,7 +204,7 @@ export default function Home() {
                   </div>{" "}
                 </div>
               </div>
-              <div className="hidden h-36 w-96 items-center justify-center flex">
+              <div className="hidden h-36 w-96 items-center justify-center">
                 {" "}
                 <div className="flex flex-col items-center md:mt-0 mt-10">
                   Climatizadores de Ar
@@ -249,7 +249,7 @@ export default function Home() {
           </div>
         </div>
         <div className="md:hidden h-1 mx-20 rounded-md w-[250px] md:w-[400px] border boder-black mt-20 bg-black/100 text-white">
-          1
+          -
         </div>
       </section>
       <section
