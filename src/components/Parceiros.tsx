@@ -22,7 +22,7 @@ export function Parceiros() {
             Abaixo todos os nossos Parceiros
           </DrawerTitle>
           <DrawerDescription>
-            <div className="grid place-items-center gap-4 grid-flow-row md:grid-cols-8 grid-cols-2">
+            <div className="grid overflow-scroll h-[500px] md:h-auto mt-10 place-items-center gap-4 grid-flow-row md:grid-cols-8 grid-cols-2">
               <div className="w-[100px]">
                 <AspectRatio ratio={9 / 4}>
                   <Image

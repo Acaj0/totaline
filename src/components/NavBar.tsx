@@ -97,7 +97,7 @@ const MobileNav = () => {
           <a className=" hover:text-blue-800" href="#2">
             Nossa Historia
           </a>
-          <a className=" hover:text-blue-800">
+          <a className=" hover:text-blue-800 ">
             <Parceiros></Parceiros>
           </a>
         </div>
