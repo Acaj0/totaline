@@ -22,7 +22,7 @@ export function Parceiros() {
             Abaixo todos os nossos Parceiros
           </DrawerTitle>
           <DrawerDescription>
-            <div className="grid place-items-center gap-1 grid-flow-row md:grid-cols-8 grid-cols-2">
+            <div className="grid place-items-center gap-4 grid-flow-row md:grid-cols-8 grid-cols-2">
               <div className="w-[100px]">
                 <AspectRatio ratio={9 / 4}>
                   <Image
@@ -265,8 +265,8 @@ export function Parceiros() {
                   />
                 </AspectRatio>
               </div>
-              <div className="w-[100px]">
-                <AspectRatio ratio={8 / 4}>
+              <div className="w-[80px]">
+                <AspectRatio ratio={4 / 4}>
                   <Image
                     src={"/cp.png"}
                     fill
@@ -275,8 +275,8 @@ export function Parceiros() {
                   />
                 </AspectRatio>
               </div>
-              <div className="w-[100px]">
-                <AspectRatio ratio={8 / 4}>
+              <div className="w-[80px]">
+                <AspectRatio ratio={5 / 4}>
                   <Image
                     src={"/day brasil.png"}
                     fill
@@ -285,8 +285,8 @@ export function Parceiros() {
                   />
                 </AspectRatio>
               </div>
-              <div className="w-[100px]">
-                <AspectRatio ratio={8 / 4}>
+              <div className="w-[80px]">
+                <AspectRatio ratio={4 / 4}>
                   <Image
                     src={"/elco.png"}
                     fill
@@ -365,8 +365,8 @@ export function Parceiros() {
                   />
                 </AspectRatio>
               </div>
-              <div className="w-[100px]">
-                <AspectRatio ratio={8 / 4}>
+              <div className="w-[70px]">
+                <AspectRatio ratio={4 / 4}>
                   <Image
                     src={"/jrc.png"}
                     fill
@@ -396,7 +396,7 @@ export function Parceiros() {
                 </AspectRatio>
               </div>
               <div className="w-[100px]">
-                <AspectRatio ratio={8 / 4}>
+                <AspectRatio ratio={7 / 4}>
                   <Image
                     src={"/migrare.png"}
                     fill
@@ -445,8 +445,8 @@ export function Parceiros() {
                   />
                 </AspectRatio>
               </div>
-              <div className="w-[100px]">
-                <AspectRatio ratio={8 / 4}>
+              <div className="w-[70px]">
+                <AspectRatio ratio={4 / 4}>
                   <Image
                     src={"/tecumseh.png"}
                     fill
@@ -455,8 +455,8 @@ export function Parceiros() {
                   />
                 </AspectRatio>
               </div>
-              <div className="w-[100px]">
-                <AspectRatio ratio={8 / 4}>
+              <div className="w-[60px]">
+                <AspectRatio ratio={4 / 4}>
                   <Image
                     src={"/testo.png"}
                     fill
@@ -465,8 +465,8 @@ export function Parceiros() {
                   />
                 </AspectRatio>
               </div>
-              <div className="w-[100px]">
-                <AspectRatio ratio={8 / 4}>
+              <div className="w-[80px]">
+                <AspectRatio ratio={6 / 4}>
                   <Image
                     src={"/trineva.png"}
                     fill
