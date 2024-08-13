@@ -38,7 +38,7 @@ export default function Home() {
                         <Image
                           src={"/midea-logo.png"}
                           fill
-                          alt="logo da loja"
+                          alt="logo da midea"
                           className="rounded-md object-cover"
                         />
                       </AspectRatio>
@@ -48,7 +48,7 @@ export default function Home() {
                         <Image
                           src={"/gree.png"}
                           fill
-                          alt="logo da loja"
+                          alt="logo da gree"
                           className="rounded-md object-cover"
                         />
                       </AspectRatio>
@@ -58,7 +58,7 @@ export default function Home() {
                         <Image
                           src={"/elgin.png"}
                           fill
-                          alt="logo da loja"
+                          alt="logo da elgin"
                           className="rounded-md object-cover"
                         />
                       </AspectRatio>
@@ -68,7 +68,7 @@ export default function Home() {
                         <Image
                           src={"/fuji.png"}
                           fill
-                          alt="logo da loja"
+                          alt="logo da fujitsu"
                           className="rounded-md object-cover"
                         />
                       </AspectRatio>
@@ -405,7 +405,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-10 mb-5 flex-row flex gap-5">
-              <a href="https://www.instagram.com/duzziclimatizacao?igsh=MXVncHJrdXZ2MWJ3ag%3D%">
+              <a href="https://www.instagram.com/duzziclimatizacao?igsh=MXVncHJrdXZ2MWJ3ag%3D%" >
                 <svg
                   className="w-10 transition ease-in-out delay-50 hover:-translate-y-0 hover:scale-110 duration-300 cursor-pointer"
                   xmlns="http://www.w3.org/2000/svg"
