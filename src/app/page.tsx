@@ -353,11 +353,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <footer className="bg-black/95 md:h-96 w-full items-center justify-start overflow-clip flex mt-5 md:mt-5 md:snap-end flex-col">
-        <div className="md:w-[1500px] md:h-36 items-center justify-center flex bg-white">
+      <footer className="bg-black/95 2xl:h-96 w-full items-center justify-start overflow-clip flex mt-5 lg:mt-5 md:snap-end flex-col">
+        <div className="2xl:w-[1500px] 2xl:h-36 items-center justify-center flex bg-white">
           <div className=" bg-black/95 text-white h-full w-full">
             <h1 className="text-2xl mt-5">Nossas Lojas</h1>
-            <div className="grid p-1 grid-flow-row grid-cols-1 md:grid-rows-2 md:grid-cols-4">
+            <div className="grid p-1 m-1 grid-flow-row grid-cols-1 md:grid-rows-2 md:grid-cols-4">
               <div>
                 <h2 className="mt-5">Duzzi Refrigeração - Matriz</h2>
                 <h3>Av. Miguel Sutil, 2265 - Areão, Cuiabá - MT</h3>
