@@ -38,7 +38,7 @@ export function Parceiros() {
                   <Image
                     src={"/midea-logo.png"}
                     fill
-                    alt="logo da loja"
+                    alt="logo da midea"
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
@@ -48,7 +48,7 @@ export function Parceiros() {
                   <Image
                     src={"/gree.png"}
                     fill
-                    alt="logo da loja"
+                    alt="logo da gree"
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
@@ -58,7 +58,7 @@ export function Parceiros() {
                   <Image
                     src={"/elgin.png"}
                     fill
-                    alt="logo da loja"
+                    alt="logo da elgin"
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
@@ -68,7 +68,7 @@ export function Parceiros() {
                   <Image
                     src={"/fuji.png"}
                     fill
-                    alt="logo da loja"
+                    alt="logo da fujitsu"
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
@@ -78,7 +78,7 @@ export function Parceiros() {
                   <Image
                     src={"/1.png"}
                     fill
-                    alt="logo da loja"
+                    alt="logo da dnfoss"
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
@@ -88,7 +88,7 @@ export function Parceiros() {
                   <Image
                     src={"/2.png"}
                     fill
-                    alt="logo da loja"
+                    alt="logo da springer"
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
@@ -98,7 +98,7 @@ export function Parceiros() {
                   <Image
                     src={"/5.png"}
                     fill
-                    alt="logo da loja"
+                    alt="logo da full gauge"
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
@@ -108,7 +108,7 @@ export function Parceiros() {
                   <Image
                     src={"/6.png"}
                     fill
-                    alt="logo da loja"
+                    alt="logo da suryka"
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
@@ -119,7 +119,7 @@ export function Parceiros() {
                   <Image
                     src={"/7.png"}
                     fill
-                    alt="logo da loja"
+                    alt="logo da embraco"
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
@@ -129,7 +129,7 @@ export function Parceiros() {
                   <Image
                     src={"/8.png"}
                     fill
-                    alt="logo da loja"
+                    alt="logo da electrolux"
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
@@ -139,7 +139,7 @@ export function Parceiros() {
                   <Image
                     src={"/9.png"}
                     fill
-                    alt="logo da loja"
+                    alt="logo da brasKoki"
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
@@ -149,7 +149,7 @@ export function Parceiros() {
                   <Image
                     src={"/copeland.png"}
                     fill
-                    alt="logo da loja"
+                    alt="logo da copeland"
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
@@ -160,7 +160,7 @@ export function Parceiros() {
                   <Image
                     src={"/12.png"}
                     fill
-                    alt="logo da loja"
+                    alt="logo da whirlpool"
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
@@ -170,7 +170,7 @@ export function Parceiros() {
                   <Image
                     src={"/13.png"}
                     fill
-                    alt="logo da loja"
+                    alt="logo da vulkan"
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
