@@ -141,7 +141,7 @@ export default function Home() {
             </div>
             <div className=" md:h-48 w-full items-center flex flex-col lg:flex-row justify-center md:mt-10 p-2 gap-20 lg:gap-5">
               {" "}
-              <a></a>
+              <span></span>
               <div className="md:h-36 md:w-96 items-center justify-center flex">
                 {" "}
                 <div className="flex flex-col items-center">
