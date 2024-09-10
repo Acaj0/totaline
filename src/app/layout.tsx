@@ -10,7 +10,7 @@ const roboto = Roboto_Flex({
 
 export const metadata: Metadata = {
   title: "Duzzi Climatização",
-  description: "A Maior loja de climatização do estado de Mato Grosso!",
+  description: "Duzzi Climatização, A Maior loja de climatização e refrigeração do estado de Mato Grosso!",
 };
 
 export default function RootLayout({
