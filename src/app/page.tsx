@@ -254,10 +254,10 @@ export default function Home() {
       </section>
       <section
         id="2"
-        className="overflow-clip bg-white md:h-screen flex p-1 m-1 mt-10 md:mt-5 md:snap-end flex-col"
+        className="overflow-clip bg-white  flex p-1 m-1 mt-10 md:mt-5 md:snap-end flex-col"
       >
-        <div className="bg-white items-center p-1 flex flex-col justify-top w-full overflow- ">
-          <h1 className="text-4xl  mt-10 italic text-center overflow-clip">
+        <div className="bg-white items-center p-1 flex flex-col justify-top w-full">
+          <h1 className="text-4xl  mt-10 italic text-center ">
             Sobre a Duzzi Climatização
           </h1>
           <span className="md:mx-36 mt-5">
@@ -304,7 +304,7 @@ export default function Home() {
             Venha nos conhecer e descubra por que a Duzzi Climatização é a
             escolha certa para suas necessidades de climatização e refrigeração.
           </span>
-          <div className="items-center flex justify-center h-72 md:w-[800px]  mt-10">
+          <div className="items-center flex justify-center h-72 md:h-96 md:w-[800px]  mt-10">
             \
             <div className="flex justify-center items-center relative gap-6 md:hidden md:w-[520px] h-44">
               <div className="w-[200px] absolute md:inset-x-0 md:-rotate-12 md:inset-y-0 inset-y-00 transform transition ease-in-out duration-700 hover:scale-125 hover:z-50 z-3 ">
@@ -318,7 +318,7 @@ export default function Home() {
                 </AspectRatio>
               </div>
             </div>
-            <div className="md:flex justify-center items-center relative gap-6 hidden md:w-[520px] h-44">
+            <div className="md:flex justify-center items-center relative gap-6 hidden md:w-[520px] h-44 overflow-visible">
               <div className="w-[200px] absolute md:inset-x-0 md:-rotate-12 md:inset-y-0 inset-y-00 transform transition ease-in-out duration-700 hover:scale-125 hover:z-50 z-3 ">
                 <AspectRatio ratio={4 / 5}>
                   <Image
