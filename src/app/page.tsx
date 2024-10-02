@@ -254,7 +254,7 @@ export default function Home() {
       </section>
       <section
         id="2"
-        className="overflow-clip bg-white  flex p-1 m-1 mt-10 md:mt-5 md:snap-end flex-col"
+        className="overflow-clip bg-white  flex p-1 m-1 mt-20 md:mt-5 md:snap-end flex-col"
       >
         <div className="bg-white items-center p-1 flex flex-col justify-top w-full">
           <h1 className="text-4xl  mt-10 italic text-center ">
