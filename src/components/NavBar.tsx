@@ -24,7 +24,7 @@ import { Parceiros } from "./Parceiros";
 export default function NavBar() {
   return (
     <div className="">
-      <div className="bg-white h-12 flex md:hidden justify-between items-center p-2">
+      <div className="mx-auto bg-white h-12 flex md:hidden justify-between items-center p-2">
         <a href="/">
           <div className="w-[40px]">
             <AspectRatio ratio={6 / 4}>
@@ -56,12 +56,12 @@ export default function NavBar() {
           </a>
           <div className="flex items-center justify-center gap-10">
             <a
-              className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-2xl hover:text-blue-800"
+              className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-2xl hover:text-blue-800 font-semibold"
               href="#2"
             >
               Nossa Historia
             </a>
-            <span className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-2xl hover:text-blue-800">
+            <span className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-2xl hover:text-blue-800 font-semibold">
               <Parceiros></Parceiros>
             </span>
           </div>
@@ -95,7 +95,7 @@ const MobileNav = () => {
         <div className="mt-10 flex flex-col gap-6 text-base font-semibold">
           <a href="#1">Inicio</a>
           <a className=" hover:text-blue-800" href="#2">
-            Nossa Historia
+            Sobre Nós
           </a>
           <span className=" hover:text-blue-800 ">
             <Parceiros></Parceiros>

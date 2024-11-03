@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Roboto, Roboto_Condensed, Roboto_Flex } from "next/font/google";
+import {
+  Montserrat,
+  Roboto,
+  Roboto_Condensed,
+  Roboto_Flex,
+} from "next/font/google";
 import "./globals.css";
-import NavBar from "@/components/NavBar";
 
-const roboto = Roboto_Flex({
+const roboto = Montserrat({
   subsets: ["latin"],
-  weight: "100",
 });
 
 export const metadata: Metadata = {
@@ -22,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt">
       <head>
         <link rel="icon" href="/duzzi.jpeg" />
       </head>

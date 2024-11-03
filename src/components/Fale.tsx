@@ -42,7 +42,7 @@ export function Fale() {
         ></span>
       </span>
       <a
-        className="text-white md:text-lg text-lg"
+        className="text-white md:text-lg text-lg font-bold"
         href="https://api.whatsapp.com/send?phone=556593333739"
       >
         Clique aqui para ser atendido!
