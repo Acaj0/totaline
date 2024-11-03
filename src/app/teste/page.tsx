@@ -52,10 +52,10 @@ export default function Component() {
         <section className="mb-16">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center md:text-left">
                 Soluções em Climatização
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-xl text-gray-600 mb-8 text-center md:text-left">
                 A maior loja de refrigeração do estado!
               </p>
               <Fale />

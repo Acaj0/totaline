@@ -26,7 +26,7 @@ export default function NavBar() {
     <div className="">
       <div className="mx-auto bg-white h-12 flex md:hidden justify-between items-center p-2">
         <a href="/">
-          <div className="w-[40px]">
+          <div className="w-[80px]">
             <AspectRatio ratio={6 / 4}>
               <Image
                 src={"/duzzi_climatiza.jpeg"}
