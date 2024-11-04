@@ -46,11 +46,12 @@ export default function Footer() {
   ];
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-[#022e5e] text-white">
+        <div className="bg-[#ec413f] w-screen h-4"></div>
       <div className="container mx-auto px-4 py-12">
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-20">
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Nossas Lojas</h3>
+            <h3 className="text-2xl font-bold">Nossas Lojas</h3>
             <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
               {stores.map((store, index) => (
                 <div key={index} className="space-y-2">
@@ -70,13 +71,13 @@ export default function Footer() {
             </div>
           </div>
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Contato</h3>
+            <h3 className="text-2xl font-bold">Contato</h3>
             <p className="flex items-center">
               <Mail className="mr-2 h-5 w-5" />
               duzziclimatizacao@gmail.com
             </p>
             <div>
-              <h3 className="text-xl font-semibold mb-4">Redes Sociais</h3>
+              <h3 className="text-2xl font-bold mb-4">Redes Sociais</h3>
               <div className="flex space-x-4">
                 <a
                   href="#"
