@@ -69,7 +69,7 @@ export default function Component() {
               <div className="aspect-video outline bg-gray-100 rounded-lg overflow-hidden">
                 <div
                   className="w-full h-full bg-cover bg-center"
-                  style={{ backgroundImage: "url(/hor.gif)" }}
+                  style={{ backgroundImage: "url(/teste.webp)" }}
                 ></div>
               </div>
             </div>
