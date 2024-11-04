@@ -45,7 +45,7 @@ export default function Component() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white text-black overflow-clip">
       <NavBar />
       <div
         className="bg-no-repeat bg-fit"
