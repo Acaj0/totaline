@@ -47,167 +47,177 @@ export default function Component() {
   return (
     <div className="min-h-screen bg-white text-black">
       <NavBar />
-      <main className="container mx-auto px-4 py-12">
-        {/* Hero section */}
-        <section className="mb-16">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-4 text-center md:text-left">
-                Soluções em Climatização
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 text-center md:text-left">
-                A maior loja de refrigeração do estado!
-              </p>
-              <Fale />
-            </div>
-            <div className="aspect-video outline bg-gray-100 rounded-lg overflow-hidden">
-              <div
-                className="w-full h-full bg-cover bg-center"
-                style={{ backgroundImage: "url(/hor.gif)" }}
-              ></div>
-            </div>
-          </div>
-        </section>
+      <div
+        className="bg-no-repeat bg-fit"
+        style={{ backgroundImage: "url(/fundo.png)" }}
+      >
+        <main className="container mx-auto px-4 py-12 ">
+          {/* Hero section */}
 
-        {/* Reseller logos section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">
-            Revenda Oficial das maiores do mercado
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { src: "/fuji.png", alt: "Fuji Logo" },
-              { src: "/elgin.png", alt: "Elgin Logo" },
-              { src: "/gree.png", alt: "Gree Logo" },
-              { src: "/midea-logo.png", alt: "Midea Logo" },
-            ].map((logo, index) => (
-              <div
-                key={index}
-                className="bg-white p-4 rounded-lg shadow-md flex items-center justify-center"
-              >
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={160}
-                  height={80}
-                  className="max-w-full h-auto"
-                />
+          <section className="mb-16">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h1 className="text-4xl md:text-7xl font-bold mb-4 text-center md:text-left text-white">
+                  Soluções em Climatização
+                </h1>
+                <p className="text-xl text-gray-300 mb-8 text-center md:text-left">
+                  A maior loja de refrigeração do estado!
+                </p>
+                <div className="md:w-[490px]">
+                <Fale /></div>
               </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Products section with updated SVG icons and WhatsApp links */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">
-            Nossos Produtos
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {products.map((product, index) => (
-              <a
-                key={index}
-                href="https://api.whatsapp.com/send?phone=556593333739"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block relative"
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
-              >
-                <Card className="text-center hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="w-16 h-16 mx-auto mb-4">{product.icon}</div>
-                    <h2 className="text-xl font-semibold mb-2">
-                      {product.name}
-                    </h2>
-                    <p className="text-gray-600">
-                      Oferecemos uma ampla gama de {product.name.toLowerCase()}{" "}
-                      para atender às suas necessidades de climatização.
-                    </p>
-                  </CardContent>
-                </Card>
-                {hoveredCard === index && (
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 p-2 bg-black text-white rounded shadow-lg flex items-center">
-                    <MessageCircle className="mr-2" size={20} />
-                    <span>Fale conosco no WhatsApp</span>
-                  </div>
-                )}
-              </a>
-            ))}
-          </div>
-        </section>
-
-        {/* About Us section */}
-        <section className="mb-16" id="2">
-          <h2 className="text-3xl font-bold mb-8 text-center">Sobre Nós</h2>
-          <div className="space-y-8">
-            <div className="prose max-w-none">
-              <p className="text-justify">
-                Fundada em 14 de outubro de 2003 por Claudio Zafalon e seu filho
-                Claudio Zafalon Filho, a Duzzi Climatização nasceu para atender
-                uma necessidade crescente de soluções térmicas e de climatização
-                no mercado. Com o passar dos anos, a empresa se consolidou como
-                uma referência no setor, oferecendo uma ampla gama de produtos e
-                serviços.
-              </p>
-              <p className="text-justify mt-2">
-                Especializamos-nos na venda de ar condicionado e materiais para
-                sua instalação, além de peças para máquinas de lavar,
-                climatizadores a base d'água, câmaras frias, peças e materiais
-                para manutenção de geladeiras e freezers, e diversas
-                ferramentas. Trabalhamos com marcas renomadas como Age Therm,
-                Alado, Amatools, Aquabios, Black & Decker, Bosch, Braskoki,
-                Brastemp, Consul, Controlbox, Copeland, CP Placas, Danfoss, Day
-                Brasil, Electrolux, Elgin, Elitech, Embraco, Emicol, EOS,
-                Extruflex, Famabras, Foxlux, Fujitsu, Full Gauge, Gree, Hulter,
-                Indusat, JRC Diamantados, K11, Leco do Brasil, Mastercool,
-                Midea, Migrare, Minipa, MOR, Performance Ind., Quimital,
-                Springer Carrier, Suryha, Tecumseh, Tectape, Testo do Brasil,
-                Trineva, Uni Refrigeração, Vathisa e Vulkan.
-              </p>
-              <p className="text-justify mt-2">
-                Contamos com mais de 80 funcionários dedicados, e somos uma
-                empresa familiar que valoriza profundamente o atendimento ao
-                cliente. Nossos vendedores possuem amplo conhecimento técnico,
-                garantindo um atendimento ágil e sem complicações. Nos
-                orgulhamos de oferecer preços competitivos e um serviço
-                especializado e humanizado.
-              </p>
-              <p className="text-justify mt-2">
-                A Duzzi Climatização já foi reconhecida pela Midea Carrier como
-                exemplo de parceiro da marca, evidenciando nosso compromisso com
-                a qualidade e a excelência. Atendemos principalmente técnicos de
-                refrigeração, mas também oferecemos nossas soluções para a
-                população em geral. Começamos com uma pequena loja e hoje temos
-                10 pontos de venda espalhados pelo Mato Grosso, com a tendência
-                de crescer cada vez mais.
-              </p>
-              <p className="text-justify mt-2">
-                Nosso objetivo é continuar expandindo, sempre buscando aprimorar
-                nosso atendimento e oferecer as melhores soluções para nossos
-                clientes. Venha nos conhecer e descubra por que a Duzzi
-                Climatização é a escolha certa para suas necessidades de
-                climatização e refrigeração.
-              </p>
-            </div>
-            <div className="grid grid-cols-3 gap-4">
-              {[1, 2, 3].map((num) => (
+              <div className="aspect-video outline bg-gray-100 rounded-lg overflow-hidden">
                 <div
-                  key={num}
-                  className="aspect-square bg-gray-200 rounded-lg overflow-hidden"
+                  className="w-full h-full bg-cover bg-center"
+                  style={{ backgroundImage: "url(/hor.gif)" }}
+                ></div>
+              </div>
+            </div>
+          </section>
+
+          {/* Reseller logos section */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold mb-8 text-center text-white">
+              Revenda Oficial das maiores do mercado
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {[
+                { src: "/fuji.png", alt: "Fuji Logo" },
+                { src: "/elgin.png", alt: "Elgin Logo" },
+                { src: "/gree.png", alt: "Gree Logo" },
+                { src: "/midea-logo.png", alt: "Midea Logo" },
+              ].map((logo, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-4 rounded-lg shadow-md flex items-center justify-center"
                 >
                   <Image
-                    src={`/foto${num === 1 ? "" : num}.jpeg`}
-                    alt={`Sobre Nós Imagem ${num}`}
-                    width={300}
-                    height={300}
-                    className="w-full h-full object-cover"
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={160}
+                    height={80}
+                    className="max-w-full h-auto"
                   />
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-      </main>
+          </section>
+
+          {/* Products section with updated SVG icons and WhatsApp links */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold mb-8 text-center">
+              Nossos Produtos
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {products.map((product, index) => (
+                <a
+                  key={index}
+                  href="https://api.whatsapp.com/send?phone=556593333739"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block relative"
+                  onMouseEnter={() => setHoveredCard(index)}
+                  onMouseLeave={() => setHoveredCard(null)}
+                >
+                  <Card className="text-center hover:shadow-lg transition-shadow">
+                    <CardContent className="p-6">
+                      <div className="w-16 h-16 mx-auto mb-4">
+                        {product.icon}
+                      </div>
+                      <h2 className="text-xl font-semibold mb-2">
+                        {product.name}
+                      </h2>
+                      <p className="text-gray-600">
+                        Oferecemos uma ampla gama de{" "}
+                        {product.name.toLowerCase()} para atender às suas
+                        necessidades de climatização.
+                      </p>
+                    </CardContent>
+                  </Card>
+                  {hoveredCard === index && (
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 p-2 bg-black text-white rounded shadow-lg flex items-center">
+                      <MessageCircle className="mr-2" size={20} />
+                      <span>Fale conosco no WhatsApp</span>
+                    </div>
+                  )}
+                </a>
+              ))}
+            </div>
+          </section>
+
+          {/* About Us section */}
+          <section className="mb-16" id="2">
+            <h2 className="text-3xl font-bold mb-8 text-center">Sobre Nós</h2>
+            <div className="space-y-8">
+              <div className="prose max-w-none">
+                <p className="text-justify">
+                  Fundada em 14 de outubro de 2003 por Claudio Zafalon e seu
+                  filho Claudio Zafalon Filho, a Duzzi Climatização nasceu para
+                  atender uma necessidade crescente de soluções térmicas e de
+                  climatização no mercado. Com o passar dos anos, a empresa se
+                  consolidou como uma referência no setor, oferecendo uma ampla
+                  gama de produtos e serviços.
+                </p>
+                <p className="text-justify mt-2">
+                  Especializamos-nos na venda de ar condicionado e materiais
+                  para sua instalação, além de peças para máquinas de lavar,
+                  climatizadores a base d'água, câmaras frias, peças e materiais
+                  para manutenção de geladeiras e freezers, e diversas
+                  ferramentas. Trabalhamos com marcas renomadas como Age Therm,
+                  Alado, Amatools, Aquabios, Black & Decker, Bosch, Braskoki,
+                  Brastemp, Consul, Controlbox, Copeland, CP Placas, Danfoss,
+                  Day Brasil, Electrolux, Elgin, Elitech, Embraco, Emicol, EOS,
+                  Extruflex, Famabras, Foxlux, Fujitsu, Full Gauge, Gree,
+                  Hulter, Indusat, JRC Diamantados, K11, Leco do Brasil,
+                  Mastercool, Midea, Migrare, Minipa, MOR, Performance Ind.,
+                  Quimital, Springer Carrier, Suryha, Tecumseh, Tectape, Testo
+                  do Brasil, Trineva, Uni Refrigeração, Vathisa e Vulkan.
+                </p>
+                <p className="text-justify mt-2">
+                  Contamos com mais de 80 funcionários dedicados, e somos uma
+                  empresa familiar que valoriza profundamente o atendimento ao
+                  cliente. Nossos vendedores possuem amplo conhecimento técnico,
+                  garantindo um atendimento ágil e sem complicações. Nos
+                  orgulhamos de oferecer preços competitivos e um serviço
+                  especializado e humanizado.
+                </p>
+                <p className="text-justify mt-2">
+                  A Duzzi Climatização já foi reconhecida pela Midea Carrier
+                  como exemplo de parceiro da marca, evidenciando nosso
+                  compromisso com a qualidade e a excelência. Atendemos
+                  principalmente técnicos de refrigeração, mas também oferecemos
+                  nossas soluções para a população em geral. Começamos com uma
+                  pequena loja e hoje temos 10 pontos de venda espalhados pelo
+                  Mato Grosso, com a tendência de crescer cada vez mais.
+                </p>
+                <p className="text-justify mt-2">
+                  Nosso objetivo é continuar expandindo, sempre buscando
+                  aprimorar nosso atendimento e oferecer as melhores soluções
+                  para nossos clientes. Venha nos conhecer e descubra por que a
+                  Duzzi Climatização é a escolha certa para suas necessidades de
+                  climatização e refrigeração.
+                </p>
+              </div>
+              <div className="grid grid-cols-3 gap-4">
+                {[1, 2, 3].map((num) => (
+                  <div
+                    key={num}
+                    className="aspect-square bg-gray-200 rounded-lg overflow-hidden"
+                  >
+                    <Image
+                      src={`/foto${num === 1 ? "" : num}.jpeg`}
+                      alt={`Sobre Nós Imagem ${num}`}
+                      width={300}
+                      height={300}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
       <Footer />
     </div>
   );

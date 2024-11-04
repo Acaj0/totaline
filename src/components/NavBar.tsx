@@ -24,7 +24,7 @@ import { Parceiros } from "./Parceiros";
 export default function NavBar() {
   return (
     <div className="">
-      <div className="mx-auto bg-white h-12 flex md:hidden justify-between items-center p-2">
+      <div className="mx-auto bg-white h-16 flex md:hidden justify-between items-center p-2">
         <a href="/">
           <div className="w-[80px]">
             <AspectRatio ratio={6 / 4}>
@@ -40,30 +40,32 @@ export default function NavBar() {
         <h1 className="italic text-xl text-black"></h1> <MobileNav />{" "}
       </div>
 
-      <header className="hidden sticky top-0 z-50 mx-36 bg-white h-24 md:flex justify-between items-center gap-20 text-xl text-black">
-        <div className="hidden bg-white h-24 w-full md:flex justify-between items-center ml-14 gap-20 text-xl text-black">
-          <a href="/">
-            <div className="w-[130px]">
-              <AspectRatio ratio={6 / 4}>
-                <Image
-                  src={"/duzzi_climatiza.jpeg"}
-                  fill
-                  alt="logo da loja"
-                  className="rounded-md object-cover"
-                />
-              </AspectRatio>
-            </div>
-          </a>
-          <div className="flex items-center justify-center gap-10">
-            <a
-              className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-2xl hover:text-blue-800 font-semibold"
-              href="#2"
-            >
-              Nossa Historia
+      <header className="hidden sticky top-0 z-50  bg-white h-24 md:flex justify-center items-center gap-20 text-xl text-black">
+        <div className="container justify-center">
+          <div className="hidden bg-white h-24 w-full md:flex justify-between gap items-center text-xl text-black">
+            <a href="/">
+              <div className="w-[130px]">
+                <AspectRatio ratio={6 / 4}>
+                  <Image
+                    src={"/duzzi_climatiza.jpeg"}
+                    fill
+                    alt="logo da loja"
+                    className="rounded-md object-cover"
+                  />
+                </AspectRatio>
+              </div>
             </a>
-            <span className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-2xl hover:text-blue-800 font-semibold">
-              <Parceiros></Parceiros>
-            </span>
+            <div className="flex items-center justify-center gap-10">
+              <a
+                className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-2xl hover:text-blue-800 font-semibold"
+                href="#2"
+              >
+                Nossa Historia
+              </a>
+              <span className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-2xl hover:text-blue-800 font-semibold">
+                <Parceiros></Parceiros>
+              </span>
+            </div>
           </div>
         </div>
       </header>
