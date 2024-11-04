@@ -128,6 +128,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Duzzi Climatização. Todos os
             direitos reservados.
           </p>
+          <a className="hover:underline" target="_blank" href="https://www.lumenweb.com.br/">Lumen Desenvolvimento Web</a>
         </div>
       </div>
     </div>
