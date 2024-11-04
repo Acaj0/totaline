@@ -72,22 +72,22 @@ export default function Footer() {
           </div>
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">Contato</h3>
-            <p className="flex items-center">
+            <a href="mailto:duzziclimatizacao@gmail.com" className="flex items-center">
               <Mail className="mr-2 h-5 w-5" />
               duzziclimatizacao@gmail.com
-            </p>
+            </a>
             <div>
               <h3 className="text-2xl font-bold mb-4">Redes Sociais</h3>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/duzziclimatizacao/"
                   className="hover:text-gray-300 transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram className="h-6 w-6" />
                 </a>
                 <a
-                  href="#"
+                  href="https://api.whatsapp.com/send?phone=556593333739"
                   className="hover:text-gray-300 transition-colors"
                   aria-label="WhatsApp"
                 >
@@ -100,7 +100,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://g.co/kgs/tLenaLb"
                   className="hover:text-gray-300 transition-colors"
                   aria-label="Google"
                 >
@@ -113,7 +113,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/DuzziClimatizacao/"
                   className="hover:text-gray-300 transition-colors"
                   aria-label="Facebook"
                 >
