@@ -1,0 +1,15 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Block all crawlers for /admin
+User-agent: *
+Disallow: /admin
+
+# Block all crawlers for /private
+User-agent: *
+Disallow: /private
+
+# Allow Google crawler
+User-agent: Googlebot
+Allow: /
