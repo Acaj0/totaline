@@ -81,7 +81,7 @@ export default function LojaPage() {
               <CardTitle>Localização</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="aspect-video relative mb-4">
+              <div className="aspect-video w-full h-auto relative mb-4 min-h-[300px]">
                 <Mainmapmatriz />
               </div>
               <InteractiveButtons
