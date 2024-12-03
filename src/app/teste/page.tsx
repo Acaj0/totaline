@@ -155,11 +155,11 @@ export default function Component() {
               ))}
             </div>
           </section>
-          <section className="my-20">
-            <div className="">
-            <h2 className="text-3xl font-bold mb-8 text-center">Nossas Lojas</h2>
+          <section className="my-20" id="3">
+            <div className="bg-[#022e5e] p-10 rounded-lg"> <div>
+            <h2 className="text-3xl font-bold mb-8 text-center text-white">Nossas Lojas</h2>
               <StoreMap />
-            </div>
+            </div></div>
           </section>
           <section className="mb-16" id="2">
             <h2 className="text-3xl font-bold mb-8 text-center">Sobre Nós</h2>

@@ -56,6 +56,12 @@ export default function NavBar() {
               </div>
             </a>
             <div className="flex items-center justify-center gap-10">
+            <a
+                className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-2xl hover:text-blue-800 font-semibold"
+                href="/teste/#3"
+              >
+                Lojas
+              </a>
               <a
                 className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-2xl hover:text-blue-800 font-semibold"
                 href="#2"
