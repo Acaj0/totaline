@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import dynamic from "next/dynamic";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import ClientMap2 from "./client-map2";
 
 export interface Store {
   id: string;
@@ -38,7 +38,7 @@ export default function Mainmapmatriz() {
   return (
     <div className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto gap-4">
       <div className="w-full h-[400px] lg:h-[415px]">
-        <ClientMap
+        <ClientMap2
           stores={stores}
           activeStore={activeStore}
           setActiveStore={setActiveStore}

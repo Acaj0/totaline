@@ -18,7 +18,7 @@ interface ClientMapProps {
   setActiveStore: (store: Store) => void
 }
 
-export default function ClientMap({ stores, activeStore, setActiveStore }: ClientMapProps) {
+export default function ClientMap2({ stores, activeStore, setActiveStore }: ClientMapProps) {
   const [mapCenter, setMapCenter] = useState<[number, number]>(activeStore.coordinates)
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function ClientMap({ stores, activeStore, setActiveStore }: Clien
   }, [])
 
   return (
-    <MapContainer center={mapCenter} zoom={6} style={{ height: '100%', width: '100%', borderRadius: '10px'}}>
+    <MapContainer center={mapCenter} zoom={13} style={{ height: '100%', width: '100%', borderRadius: '10px'}}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

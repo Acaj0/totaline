@@ -46,7 +46,7 @@ export default function StoreMap() {
   const [activeStore, setActiveStore] = useState<Store>(stores[0]);
 
   return (
-    <div className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto gap-4">
+    <div className="flex flex-col lg:flex-row w-full  gap-4">
       <div className="w-full lg:w-2/3 h-[400px] lg:h-[600px]">
         <ClientMap
           stores={stores}

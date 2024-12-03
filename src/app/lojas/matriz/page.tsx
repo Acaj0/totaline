@@ -44,7 +44,7 @@ export default function LojaPage() {
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${loja.whatsapp}`;
 
   return (
-    <div>
+    <div className="overflow-clip">
       <NavBar />
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6 text-center">{loja.nome}</h1>
