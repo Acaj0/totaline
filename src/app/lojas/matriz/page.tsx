@@ -46,7 +46,7 @@ export default function LojaPage() {
   return (
     <div className="overflow-clip">
       <NavBar />
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 mb-16">
         <h1 className="text-3xl font-bold mb-6 text-center">{loja.nome}</h1>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -63,12 +63,12 @@ export default function LojaPage() {
                 className="w-full rounded-lg mb-4"
               />
               <div className="space-y-2">
-                <p className="flex items-center">
+                <p  className="flex items-center">
                   <MapPin className="mr-2" /> {loja.endereco}
                 </p>
-                <p className="flex items-center">
+                <a href="tel:+1239271-9367" className="flex items-center">
                   <Phone className="mr-2" /> {loja.telefone}
-                </p>
+                </a>
                 <p className="flex items-center">
                   <Clock className="mr-2" /> {loja.horario}
                 </p>

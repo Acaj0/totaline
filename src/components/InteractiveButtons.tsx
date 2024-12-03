@@ -1,40 +1,114 @@
-'use client'
+"use client";
 
-import { Button } from '@/components/ui/button'
-import { Navigation, MapPin, MessageCircle } from 'lucide-react'
+import { Button } from "@/components/ui/button";
+import { Navigation, MapPin, MessageCircle } from "lucide-react";
 
 interface InteractiveButtonsProps {
-  wazeUrl: string
-  googleMapsUrl: string
-  whatsappUrl: string
+  wazeUrl: string;
+  googleMapsUrl: string;
+  whatsappUrl: string;
 }
 
-export function InteractiveButtons({ wazeUrl, googleMapsUrl, whatsappUrl }: InteractiveButtonsProps) {
+export function InteractiveButtons({
+  wazeUrl,
+  googleMapsUrl,
+  whatsappUrl,
+}: InteractiveButtonsProps) {
   return (
     <>
       <div className="grid grid-cols-2 gap-4">
-        <Button 
-          className="w-full" 
-          onClick={() => window.open(wazeUrl, '_blank')}
+        <Button
+          className="w-full"
+          onClick={() => window.open(wazeUrl, "_blank")}
         >
-          <Navigation className="mr-2" /> Waze
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="100"
+            height="100"
+            viewBox="0 0 48 48"
+          >
+            <path
+              fill="#37474f"
+              d="M27,38C9.1,38,5.2,33.2,3.6,31.1c-0.4-0.4-0.6-1-0.6-1.6C3,28.1,4.1,27,5.5,27C6.4,27,9,27,9,22.1 v-0.6C9,12.4,17.1,5,27,5s18,7.4,18,16.5S36.9,38,27,38z"
+            ></path>
+            <path
+              fill="#eceff1"
+              d="M27,36c8.8,0,16-6.5,16-14.5S35.8,7,27,7s-16,6.5-16,14.5v0.6c0,6.2-3.8,6.9-5.5,6.9 C5.2,29,5,29.2,5,29.5c0,0.1,0,0.2,0.1,0.3C6.6,31.7,10,36,27,36z"
+            ></path>
+            <path
+              fill="#37474f"
+              d="M32 16A2 2 0 1 0 32 20 2 2 0 1 0 32 16zM22 16A2 2 0 1 0 22 20 2 2 0 1 0 22 16zM27 29c-4.8 0-6.7-3.5-7-5.3-.1-.5.3-1.1.8-1.2.5-.1 1.1.3 1.2.8 0 .1.7 3.7 5 3.7 4.3 0 5-3.5 5-3.7.1-.5.6-.9 1.2-.8.5.1.9.6.8 1.1C33.7 25.5 31.8 29 27 29zM16.5 34A4.5 4.5 0 1 0 16.5 43 4.5 4.5 0 1 0 16.5 34z"
+            ></path>
+            <path
+              fill="#607d8b"
+              d="M16.5 37A1.5 1.5 0 1 0 16.5 40A1.5 1.5 0 1 0 16.5 37Z"
+            ></path>
+            <path
+              fill="#37474f"
+              d="M32.5 34A4.5 4.5 0 1 0 32.5 43A4.5 4.5 0 1 0 32.5 34Z"
+            ></path>
+            <path
+              fill="#607d8b"
+              d="M32.5 37A1.5 1.5 0 1 0 32.5 40A1.5 1.5 0 1 0 32.5 37Z"
+            ></path>
+          </svg>
+          Waze
         </Button>
-        <Button 
-          className="w-full" 
-          onClick={() => window.open(googleMapsUrl, '_blank')}
+        <Button
+          className="w-full"
+          onClick={() => window.open(googleMapsUrl, "_blank")}
         >
-          <MapPin className="mr-2" /> Google Maps
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="100"
+            height="100"
+            viewBox="0 0 48 48"
+          >
+            <path
+              fill="#1c9957"
+              d="M42,39V9c0-1.657-1.343-3-3-3H9C7.343,6,6,7.343,6,9v30c0,1.657,1.343,3,3,3h30C40.657,42,42,40.657,42,39z"
+            ></path>
+            <path
+              fill="#3e7bf1"
+              d="M9,42h30c1.657,0-15-16-15-16S7.343,42,9,42z"
+            ></path>
+            <path
+              fill="#cbccc9"
+              d="M42,39V9c0-1.657-16,15-16,15S42,40.657,42,39z"
+            ></path>
+            <path
+              fill="#efefef"
+              d="M39,42c1.657,0,3-1.343,3-3v-0.245L26.245,23L23,26.245L38.755,42H39z"
+            ></path>
+            <path
+              fill="#ffd73d"
+              d="M42,9c0-1.657-1.343-3-3-3h-0.245L6,38.755V39c0,1.657,1.343,3,3,3h0.245L42,9.245V9z"
+            ></path>
+            <path
+              fill="#d73f35"
+              d="M36,2c-5.523,0-10,4.477-10,10c0,6.813,7.666,9.295,9.333,19.851C35.44,32.531,35.448,33,36,33s0.56-0.469,0.667-1.149C38.334,21.295,46,18.813,46,12C46,6.477,41.523,2,36,2z"
+            ></path>
+            <path
+              fill="#752622"
+              d="M36 8.5A3.5 3.5 0 1 0 36 15.5A3.5 3.5 0 1 0 36 8.5Z"
+            ></path>
+            <path
+              fill="#fff"
+              d="M14.493,12.531v2.101h2.994c-0.392,1.274-1.455,2.185-2.994,2.185c-1.833,0-3.318-1.485-3.318-3.318s1.486-3.318,3.318-3.318c0.824,0,1.576,0.302,2.156,0.799l1.548-1.547C17.22,8.543,15.92,8,14.493,8c-3.038,0-5.501,2.463-5.501,5.5s2.463,5.5,5.501,5.5c4.81,0,5.637-4.317,5.184-6.461L14.493,12.531z"
+            ></path>
+          </svg>{" "}
+          Google Maps
         </Button>
       </div>
       <div className="mt-8 text-center">
-        <Button 
-          size="lg" 
-          onClick={() => window.open(whatsappUrl, '_blank')}
-        >
-          <MessageCircle className="mr-2" /> Falar com a Loja
+        <Button size="lg" onClick={() => window.open(whatsappUrl, "_blank")}>
+        <svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg> Falar com a Loja
         </Button>
       </div>
     </>
-  )
+  );
 }
-
