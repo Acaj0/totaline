@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-import { Store } from './store-map'
+import { Store } from './mainmapmatriz'
 
 function ChangeView({ center }: { center: [number, number] }) {
   const map = useMap()
@@ -54,4 +54,3 @@ export default function ClientMap2({ stores, activeStore, setActiveStore }: Clie
     </MapContainer>
   )
 }
-

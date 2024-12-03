@@ -1,11 +1,14 @@
+import React from 'react';
 import Image from "next/image";
-import { MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { InteractiveButtons } from "@/components/InteractiveButtons";
 import { Metadata } from "next";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import Mainmapmatriz from "@/components/mainmapmatriz";
+import dynamic from 'next/dynamic'
+
+const Mainmapmatriz = dynamic(() => import('@/components/mainmapmatriz'), { ssr: false })
 
 export const metadata: Metadata = {
   title: "Duzzi Climatização e Refrigeração - Matriz",
@@ -15,14 +18,6 @@ export const metadata: Metadata = {
     title: "Duzzi Climatização e Refrigeração - Matriz",
     description:
       "Localizada em Cuiabá, a loja matriz da Duzzi Climatização é o centro de soluções em ar-condicionado e refrigeração. Oferece produtos, serviços especializados e suporte técnico para toda a região.",
-    images: [
-      {
-        url: "/matriz.png",
-        width: 1200,
-        height: 630,
-        alt: "matriz",
-      },
-    ],
   },
 };
 
@@ -63,7 +58,7 @@ export default function LojaPage() {
                 className="w-full rounded-lg mb-4"
               />
               <div className="space-y-2">
-                <p  className="flex items-center">
+                <p className="flex items-center">
                   <MapPin className="mr-2" /> {loja.endereco}
                 </p>
                 <a href="tel:+1239271-9367" className="flex items-center">
@@ -81,7 +76,7 @@ export default function LojaPage() {
               <CardTitle>Localização</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="aspect-video w-full h-auto relative mb-4 min-h-[300px]">
+              <div className="w-full h-[400px] lg:h-[415px] relative mb-4">
                 <Mainmapmatriz />
               </div>
               <InteractiveButtons
@@ -97,3 +92,4 @@ export default function LojaPage() {
     </div>
   );
 }
+

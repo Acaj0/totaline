@@ -1,7 +1,7 @@
 "use client";
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import ClientMap2 from "./client-map2";
 
 export interface Store {
   id: string;
@@ -27,13 +27,26 @@ const stores: Store[] = [
   },
 ];
 
-const ClientMap = dynamic(() => import("./client-map"), {
+const ClientMap2 = dynamic(() => import("./client-map2"), {
   ssr: false,
   loading: () => <p>Carregando mapa...</p>,
 });
 
 export default function Mainmapmatriz() {
   const [activeStore, setActiveStore] = useState<Store>(stores[0]);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return (
+      <div className="w-full h-[400px] lg:h-[415px] bg-gray-200 animate-pulse rounded-lg flex items-center justify-center">
+        <p>Carregando mapa...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto gap-4">
