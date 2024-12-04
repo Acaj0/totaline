@@ -56,7 +56,7 @@ export default function Footer() {
               {stores.map((store, index) => (
                 <div key={index} className="space-y-2">
                   <h4 className="font-medium">
-                    Duzzi Refrigeração - {store.name}
+                    Duzzi Totaline Refrigeração - {store.name}
                   </h4>
                   <p className="flex items-start text-sm">
                     <MapPin className="mr-2 h-5 w-5 flex-shrink-0" />

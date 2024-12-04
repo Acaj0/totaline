@@ -35,6 +35,26 @@ const stores: Store[] = [
     image: "/porto.png",
     url: "/lojas/porto",
   },
+  {
+    id: "cpa",
+    name: "Duzzi Totaline Refrigeração - CPA",
+    address: "R. Cocã, 27, CPA 4, 1° Etapa - Cuiabá - MT",
+    phone: "(65) 3646-4969",
+    city: "Cuiabá",
+    coordinates: [-15.561947123170008, -56.037965219342],
+    image: "/cpa1.jpg",
+    url: "/lojas/cpa",
+  },
+  {
+    id: "vg",
+    name: "Duzzi Totaline Refrigeração - Várzea Grande",
+    address: "Av. Gov. Júlio Campos, 3033, Jd Gloria I. Várzea Grande",
+    phone: "(65) 3029-2329",
+    city: "Várzea Grande",
+    coordinates: [-15.64809253992046, -56.14477646729278],
+    image: "/vg1.jpg",
+    url: "/lojas/varzea-grande",
+  },
 ];
 
 const ClientMap = dynamic(() => import("./client-map"), {
