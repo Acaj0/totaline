@@ -2,6 +2,8 @@
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
+import { AspectRatio } from "./ui/aspect-ratio";
 
 export interface Store {
   id: string;
@@ -17,7 +19,7 @@ export interface Store {
 const stores: Store[] = [
   {
     id: "matriz",
-    name: "Duzzi Refrigeração - Matriz",
+    name: "Duzzi Totaline - Matriz",
     address: "Av. Miguel Sutil, 2265 - Areão, Cuiabá - MT",
     phone: "(65) 3624-1990",
     city: "Cuiabá",
@@ -27,7 +29,7 @@ const stores: Store[] = [
   },
   {
     id: "porto",
-    name: "Duzzi Refrigeração - Porto",
+    name: "Duzzi Totaline - Porto",
     address: "Av. Mário Correa, 319, Porto - Cuiabá - MT",
     phone: "(65) 3623-3452",
     city: "Cuiabá",
@@ -37,7 +39,7 @@ const stores: Store[] = [
   },
   {
     id: "cpa",
-    name: "Duzzi Totaline Refrigeração - CPA",
+    name: "Duzzi Totaline - CPA",
     address: "R. Cocã, 27, CPA 4, 1° Etapa - Cuiabá - MT",
     phone: "(65) 3646-4969",
     city: "Cuiabá",
@@ -47,7 +49,7 @@ const stores: Store[] = [
   },
   {
     id: "vg",
-    name: "Duzzi Totaline Refrigeração - Várzea Grande",
+    name: "Duzzi Totaline - Várzea Grande",
     address: "Av. Gov. Júlio Campos, 3033, Jd Gloria I. Várzea Grande",
     phone: "(65) 3029-2329",
     city: "Várzea Grande",
@@ -57,7 +59,7 @@ const stores: Store[] = [
   },
   {
     id: "rondonopolis",
-    name: "Duzzi Totaline Refrigeração - Rondonópolis",
+    name: "Duzzi Totaline - Rondonópolis",
     address: "R. Barão do Rio Branco, 1941 - La Salle, Rondonópolis - MT",
     phone: "(66) 3423-7550",
     city: "Rondonópolis",
@@ -67,7 +69,7 @@ const stores: Store[] = [
   },
   {
     id: "Sinop",
-    name: "Duzzi Totaline Refrigeração - Sinop",
+    name: "Duzzi Totaline - Sinop",
     address: "R. das Orquídeas 1045, Res. Sul - Sinop - MT",
     phone: "(66) 3532-2220",
     city: "Sinop",
@@ -77,7 +79,7 @@ const stores: Store[] = [
   },
   {
     id: "Primavera do Leste",
-    name: "Duzzi Totaline Refrigeração - Primavera do Leste",
+    name: "Duzzi Totaline - Primavera do Leste",
     address: "Rua Guanabara N. 520 Centro, Primavera do Leste - MT",
     phone: "(66) 3497-3540",
     city: "Primavera do Leste",
@@ -87,7 +89,7 @@ const stores: Store[] = [
   },
   {
     id: "Campo Verde",
-    name: "Duzzi Totaline Refrigeração - Campo Verde",
+    name: "Duzzi Totaline - Campo Verde",
     address: "Av. Sen Antônio Fobtana S/N Jardim C. verde, Campo Verde - MT",
     phone: "(66) 99982-2726",
     city: "Primavera do Leste",
@@ -107,7 +109,7 @@ export default function StoreMap() {
 
   return (
     <div className="flex flex-col lg:flex-row w-full  gap-4">
-      <div className="w-full lg:w-2/3 h-[400px] lg:h-[600px]">
+      <div className="w-full lg:w-2/3 h-[400px] lg:h-[740px]">
         <ClientMap
           stores={stores}
           activeStore={activeStore}
@@ -115,7 +117,7 @@ export default function StoreMap() {
         />
       </div>
       <div className="w-full lg:w-1/3">
-        <Card>
+        <Card >
           <CardHeader>
             <CardTitle>{activeStore.name}</CardTitle>
           </CardHeader>
@@ -125,7 +127,7 @@ export default function StoreMap() {
               alt={activeStore.name}
               className="w-full h-48 object-cover rounded-md mb-4"
             />
-            <p className="text-sm text-gray-600 mb-2">{activeStore.address}</p>
+            <p className="text-xs text-gray-600 mb-2 text-clip">{activeStore.address}</p>
             <p className="text-sm font-semibold">{activeStore.phone}</p>
             <a
               href={activeStore.url}
@@ -133,6 +135,28 @@ export default function StoreMap() {
             >
               Ver detalhes
             </a>
+          </CardContent>
+        </Card>
+        <Card className="w-full max-w-md mx-auto overflow-hidden mt-2">
+          <CardHeader className="p-1">
+            <AspectRatio ratio={12/ 4}>
+              <Image
+                src="/mt.png"
+                alt="Bandeira do Mato Grosso"
+                width={400}
+                height={200}
+                className="w-full h-full object-cover"
+              />
+            </AspectRatio>
+          </CardHeader>
+          <CardContent className="p-6">
+            <CardTitle className="text-2xl font-bold mb-4 text-center">
+              A maior do Mato Grosso!
+            </CardTitle>
+            <p className="text-center">
+              A Duzzi Totaline é líder no estado, oferecendo as melhores
+              soluções em refrigeração e climatização com qualidade e confiança.
+            </p>
           </CardContent>
         </Card>
       </div>
