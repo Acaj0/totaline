@@ -141,7 +141,7 @@ export default function StoreMap() {
           <CardHeader className="p-1">
             <AspectRatio ratio={12/ 4}>
               <Image
-                src="/mt.png"
+                src="/mt.jpg"
                 alt="Bandeira do Mato Grosso"
                 width={400}
                 height={200}
