@@ -58,7 +58,7 @@ export default function NavBar() {
             <div className="flex items-center justify-center gap-10">
             <a
                 className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-2xl hover:text-blue-800 font-semibold"
-                href="/teste/#3"
+                href="/#3"
               >
                 Lojas
               </a>
@@ -100,10 +100,13 @@ const MobileNav = () => {
         </Button>
       </SheetTrigger>
       <SheetContent>
-        <div className="mt-10 flex flex-col gap-6 text-base font-semibold">
+        <div className="mt-10 flex flex-col gap-6 text-base font-semibold z-50">
           <a href="#1">Inicio</a>
           <a className=" hover:text-blue-800" href="#2">
             Sobre Nós
+          </a>
+          <a className=" hover:text-blue-800" href="/#3">
+            Lojas
           </a>
           <span className=" hover:text-blue-800 ">
             <Parceiros></Parceiros>

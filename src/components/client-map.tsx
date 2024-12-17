@@ -33,7 +33,7 @@ export default function ClientMap({ stores, activeStore, setActiveStore }: Clien
   }, [])
 
   return (
-    <MapContainer center={mapCenter} zoom={6} style={{ height: '100%', width: '100%', borderRadius: '10px'}}>
+    <MapContainer center={mapCenter} zoom={6} style={{ height: '100%', width: '100%', borderRadius: '10px'}} className='z-40'>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

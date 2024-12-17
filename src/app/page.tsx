@@ -156,7 +156,7 @@ export default function Component() {
             </div>
           </section>
           <section className="my-20" id="3">
-            <div className="bg-[#022e5e] p-10 rounded-lg"> <div>
+            <div className="bg-[#022e5e] p-10 rounded-lg z-40"> <div>
             <h2 className="text-3xl font-bold mb-8 text-center text-white">Nossas Lojas</h2>
               <StoreMap />
             </div></div>
