@@ -43,6 +43,16 @@ export default function Footer() {
       address: "Av. Sen Antônio Fobtana S/N Jardim C. verde, Campo Verde - MT",
       phone: "(66) 99982-2726",
     },
+    {
+      name: "Coxipó",
+      address: "BR-364, 1093 - Jardim Passaredo, Cuiabá - MT",
+      phone: "(65) 3623-8260",
+    },
+    {
+      name: "Lucas do Rio Verde",
+      address: "Av. Santa Catarina, 90e - Cidade Nova, Lucas do Rio Verde - MT",
+      phone: "(65) 3212-3100",
+    },
   ];
 
   return (
@@ -52,7 +62,7 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row gap-20">
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">Nossas Lojas</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-y-6">
               {stores.map((store, index) => (
                 <div key={index} className="space-y-2">
                   <h4 className="font-medium">

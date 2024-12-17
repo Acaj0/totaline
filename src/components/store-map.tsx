@@ -97,6 +97,26 @@ const stores: Store[] = [
     image: "/campoverde1.jpeg",
     url: "/lojas/campo-verde",
   },
+  {
+    id: "coxipo",
+    name: "Duzzi Totaline - Coxipó",
+    address: "BR-364, 1093 - Jardim Passaredo, Cuiabá - MT",
+    phone: "(65) 3623-8260",
+    city: "Cuiaba",
+    coordinates: [-15.645255613335618, -56.010008415339954],
+    image: "/campoverde1.jpeg",
+    url: "/lojas/coxipo",
+  },
+  {
+    id: "lucas",
+    name: "Duzzi Totaline - Lucas do Rio Verde",
+    address: "Av. Santa Catarina, 90e - Cidade Nova, Lucas do Rio Verde - MT",
+    phone: "(65) 3212-3100",
+    city: "lucas do rio verde",
+    coordinates: [-13.072017482372758, -55.91279189287434],
+    image: "/campoverde1.jpeg",
+    url: "/lojas/lucas-do-rio-verde",
+  },
 ];
 
 const ClientMap = dynamic(() => import("./client-map"), {
