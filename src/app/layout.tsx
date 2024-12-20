@@ -6,6 +6,7 @@ import {
   Roboto_Flex,
 } from "next/font/google";
 import "./globals.css";
+import WhatsAppButton from "@/components/whatsappbutton";
 
 const roboto = Montserrat({
   subsets: ["latin"],
@@ -46,6 +47,7 @@ export default function RootLayout({
         <link rel="icon" href="/duzzi.jpeg" />
       </head>
       <body className={roboto.className}>
+        <WhatsAppButton />
         <header></header>
         {children}
       </body>
