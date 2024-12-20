@@ -22,7 +22,7 @@ export function LojaContent() {
     endereco: "Av. Miguel Sutil, 2265 - Areão, Cuiabá - MT",
     telefone: "(65) 3624-1990",
     horario: "Seg-Sex: 8h-18h | Sáb: 8h-13h",
-    whatsapp: "5511123456789",
+    whatsapp: "556593333739",
     coordenadas: {
       latitude: -15.602493562480237,
       longitude: -56.07623541804967,

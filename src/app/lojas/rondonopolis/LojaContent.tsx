@@ -24,7 +24,7 @@ export function LojaContent() {
     endereco: "R. Barão do Rio Branco, 1941 - La Salle, Rondonópolis - MT",
     telefone: "(66) 3423-7550",
     horario: "Seg-Sex: 8h-18h | Sáb: 8h-13h",
-    whatsapp: "5511123456789",
+    whatsapp: "556593333739",
     coordenadas: {
       latitude: -16.45973225664186, 
       longitude: -54.637496642339464,

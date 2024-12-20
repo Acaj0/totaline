@@ -25,7 +25,7 @@ export function LojaContent() {
     endereco: "Av. Sen Antônio Fobtana S/N Jardim C. verde, Campo Verde - MT",
     telefone: "(66) 3423-7550",
     horario: "Seg-Sex: 8h-18h | Sáb: 8h-13h",
-    whatsapp: "66999822726",
+    whatsapp: "556593333739",
     coordenadas: {
       latitude: -15.548713365738903,  
       longitude: -55.162593396861375,

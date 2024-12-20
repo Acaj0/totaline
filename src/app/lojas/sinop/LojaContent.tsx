@@ -25,7 +25,7 @@ export function LojaContent() {
     endereco: "R. das Orquídeas 1045, Res. Sul - Sinop - MT",
     telefone: "(66) 3532-2220",
     horario: "Seg-Sex: 8h-18h | Sáb: 8h-13h",
-    whatsapp: "5511123456789",
+    whatsapp: "556593333739",
     coordenadas: {
       latitude: -11.86173853686664, 
       longitude: -55.504884992466934 ,

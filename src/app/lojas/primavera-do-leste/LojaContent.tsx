@@ -27,7 +27,7 @@ export function LojaContent() {
     endereco: "Rua Guanabara N. 520 Centro, Primavera do Leste - MT",
     telefone: "(66) 3423-7550",
     horario: "Seg-Sex: 8h-18h | Sáb: 8h-13h",
-    whatsapp: "(66) 3497-3540",
+    whatsapp: "556593333739",
     coordenadas: {
       latitude: -15.551245499086598,
       longitude: -54.29683559154745,

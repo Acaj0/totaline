@@ -24,7 +24,7 @@ export function LojaContent() {
     endereco: "Av. Gov. Júlio Campos, 3033, Jd Gloria I. Várzea Grande",
     telefone: "(65) 3029-2329",
     horario: "Seg-Sex: 8h-18h | Sáb: 8h-13h",
-    whatsapp: "5511123456789",
+    whatsapp: "556593333739",
     coordenadas: {
       latitude: -15.641687103280395, 
       longitude: -56.12417710325987,
