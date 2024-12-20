@@ -13,7 +13,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import dynamic from 'next/dynamic'
-import Mainmapporto from '@/components/mainmapporto';
 import Mainmapvg from '@/components/mainmapvg';
 
 const Mainmapmatriz = dynamic(() => import('@/components/mainmapmatriz'), { ssr: false })
