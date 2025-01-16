@@ -24,7 +24,7 @@ export function LojaContent() {
     endereco: "BR-364, 1093 - Jardim Passaredo, Cuiabá - MT",
     telefone: "(65) 3623-8260",
     horario: "Seg-Sex: 8h-18h | Sáb: 8h-13h",
-    whatsapp: "5511123456789",
+    whatsapp: "556593333739",
     coordenadas: {
       latitude: -15.645203956674331, 
       longitude: -56.00997622883499,
@@ -82,7 +82,7 @@ export function LojaContent() {
               <p className="flex items-center">
                 <MapPin className="mr-2" /> {loja.endereco}
               </p>
-              <a href="tel:+1239271-9367" className="flex items-center">
+              <a href="tel:+6536238260" className="flex items-center">
                 <Phone className="mr-2" /> {loja.telefone}
               </a>
               <p className="flex items-center">

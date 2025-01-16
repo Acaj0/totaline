@@ -13,7 +13,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import dynamic from 'next/dynamic'
-import Mainmapporto from '@/components/mainmapporto';
 import Mainmapvg from '@/components/mainmapvg';
 
 const Mainmapmatriz = dynamic(() => import('@/components/mainmapmatriz'), { ssr: false })
@@ -24,7 +23,7 @@ export function LojaContent() {
     endereco: "Av. Gov. Júlio Campos, 3033, Jd Gloria I. Várzea Grande",
     telefone: "(65) 3029-2329",
     horario: "Seg-Sex: 8h-18h | Sáb: 8h-13h",
-    whatsapp: "5511123456789",
+    whatsapp: "556593333739",
     coordenadas: {
       latitude: -15.641687103280395, 
       longitude: -56.12417710325987,
@@ -74,7 +73,7 @@ export function LojaContent() {
               <p className="flex items-center">
                 <MapPin className="mr-2" /> {loja.endereco}
               </p>
-              <a href="tel:+1239271-9367" className="flex items-center">
+              <a href="tel:+6530292329" className="flex items-center">
                 <Phone className="mr-2" /> {loja.telefone}
               </a>
               <p className="flex items-center">

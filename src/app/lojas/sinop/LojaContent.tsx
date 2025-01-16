@@ -13,8 +13,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import dynamic from 'next/dynamic'
-import Mainmapporto from '@/components/mainmapporto';
-import Mainmaprondonopolis from '@/components/mainmaprondonopolis';
 import Mainmapsinop from '@/components/mainmapsinop';
 
 const Mainmapmatriz = dynamic(() => import('@/components/mainmapmatriz'), { ssr: false })
@@ -25,7 +23,7 @@ export function LojaContent() {
     endereco: "R. das Orquídeas 1045, Res. Sul - Sinop - MT",
     telefone: "(66) 3532-2220",
     horario: "Seg-Sex: 8h-18h | Sáb: 8h-13h",
-    whatsapp: "5511123456789",
+    whatsapp: "556593333739",
     coordenadas: {
       latitude: -11.86173853686664, 
       longitude: -55.504884992466934 ,
@@ -75,7 +73,7 @@ export function LojaContent() {
               <p className="flex items-center">
                 <MapPin className="mr-2" /> {loja.endereco}
               </p>
-              <a href="tel:+1239271-9367" className="flex items-center">
+              <a href="tel:+6635322220" className="flex items-center">
                 <Phone className="mr-2" /> {loja.telefone}
               </a>
               <p className="flex items-center">

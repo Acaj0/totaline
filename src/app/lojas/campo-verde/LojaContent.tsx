@@ -25,7 +25,7 @@ export function LojaContent() {
     endereco: "Av. Sen Antônio Fobtana S/N Jardim C. verde, Campo Verde - MT",
     telefone: "(66) 3423-7550",
     horario: "Seg-Sex: 8h-18h | Sáb: 8h-13h",
-    whatsapp: "66999822726",
+    whatsapp: "556593333739",
     coordenadas: {
       latitude: -15.548713365738903,  
       longitude: -55.162593396861375,
@@ -75,7 +75,7 @@ export function LojaContent() {
               <p className="flex items-center">
                 <MapPin className="mr-2" /> {loja.endereco}
               </p>
-              <a href="tel:+1239271-9367" className="flex items-center">
+              <a href="tel:+66999822726" className="flex items-center">
                 <Phone className="mr-2" /> {loja.telefone}
               </a>
               <p className="flex items-center">

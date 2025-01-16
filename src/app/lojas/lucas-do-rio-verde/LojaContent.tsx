@@ -23,7 +23,7 @@ export function LojaContent() {
     endereco: "Av. Santa Catarina, 90e - Cidade Nova, Lucas do Rio Verde - MT",
     telefone: "(65) 3212-3100",
     horario: "Seg-Sex: 8h-18h | Sáb: 8h-13h",
-    whatsapp: "5511123456789",
+    whatsapp: "556593333739",
     coordenadas: {
       latitude: -13.072007031557895, 
       longitude: -55.912824079379305,
@@ -81,7 +81,7 @@ export function LojaContent() {
               <p className="flex items-center">
                 <MapPin className="mr-2" /> {loja.endereco}
               </p>
-              <a href="tel:+1239271-9367" className="flex items-center">
+              <a href="tel:+6532123100" className="flex items-center">
                 <Phone className="mr-2" /> {loja.telefone}
               </a>
               <p className="flex items-center">

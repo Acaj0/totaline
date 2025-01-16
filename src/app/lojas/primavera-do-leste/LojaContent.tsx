@@ -27,7 +27,7 @@ export function LojaContent() {
     endereco: "Rua Guanabara N. 520 Centro, Primavera do Leste - MT",
     telefone: "(66) 3423-7550",
     horario: "Seg-Sex: 8h-18h | Sáb: 8h-13h",
-    whatsapp: "(66) 3497-3540",
+    whatsapp: "556593333739",
     coordenadas: {
       latitude: -15.551245499086598,
       longitude: -54.29683559154745,
@@ -76,7 +76,7 @@ export function LojaContent() {
               <p className="flex items-center">
                 <MapPin className="mr-2" /> {loja.endereco}
               </p>
-              <a href="tel:+1239271-9367" className="flex items-center">
+              <a href="tel:+6634237550" className="flex items-center">
                 <Phone className="mr-2" /> {loja.telefone}
               </a>
               <p className="flex items-center">
