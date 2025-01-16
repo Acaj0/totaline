@@ -48,7 +48,7 @@ export function LojaContent() {
               <CarouselContent>
                 <CarouselItem>
                   <Image
-                    src="/porto.png"
+                    src="/port1.jpg"
                     alt={`Fachada da ${loja.nome} - Imagem 1`}
                     width={400}
                     height={300}
@@ -57,7 +57,25 @@ export function LojaContent() {
                 </CarouselItem>
                 <CarouselItem>
                   <Image
-                    src="/porto2.jpg"
+                    src="/port2.jpg"
+                    alt={`Interior da ${loja.nome} - Imagem 2`}
+                    width={400}
+                    height={300}
+                    className="w-auto h-max-[400px] rounded-lg"
+                  />
+                </CarouselItem>
+                <CarouselItem>
+                  <Image
+                    src="/port3.jpg"
+                    alt={`Interior da ${loja.nome} - Imagem 2`}
+                    width={400}
+                    height={300}
+                    className="w-auto h-max-[400px] rounded-lg"
+                  />
+                </CarouselItem>
+                <CarouselItem>
+                  <Image
+                    src="/port4.jpg"
                     alt={`Interior da ${loja.nome} - Imagem 2`}
                     width={400}
                     height={300}
