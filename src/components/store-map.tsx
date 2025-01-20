@@ -34,7 +34,7 @@ const stores: Store[] = [
     phone: "(65) 3623-3452",
     city: "Cuiabá",
     coordinates: [-15.611784341670454, -56.10214517015268],
-    image: "/porto.png",
+    image: "/port1.jpeg",
     url: "/lojas/porto",
   },
   {
