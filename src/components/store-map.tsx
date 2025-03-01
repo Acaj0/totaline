@@ -74,7 +74,7 @@ const stores: Store[] = [
     phone: "(66) 3532-2220",
     city: "Sinop",
     coordinates: [-11.861699162848879, -55.50489303909351],
-    image: "/sinop1.png",
+    image: "/sinop1.jpg",
     url: "/lojas/sinop",
   },
   {
