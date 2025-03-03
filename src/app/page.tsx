@@ -1,25 +1,37 @@
-"use client";
+"use client"
 
-import { Fale } from "@/components/Fale";
-import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
-import StoreMap from "@/components/store-map";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  PhoneCall,
-  Mail,
-  MapPin,
-  Facebook,
-  Instagram,
-  Linkedin,
-  MessageCircle,
-} from "lucide-react";
-import Image from "next/image";
-import { useState } from "react";
+import { Fale } from "@/components/Fale"
+import Footer from "@/components/Footer"
+import NavBar from "@/components/NavBar"
+import StoreMap from "@/components/store-map"
+import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image"
+import { useState, useEffect } from "react"
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 
 export default function Component() {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null)
+
+  // Animation variants
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  }
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  }
 
   const products = [
     {
@@ -43,21 +55,47 @@ export default function Component() {
         </svg>
       ),
     },
-  ];
+  ]
+
+  // Custom hook for scroll animations
+  const useScrollAnimation = () => {
+    const controls = useAnimation()
+    const [ref, inView] = useInView({
+      triggerOnce: true,
+      threshold: 0.1,
+    })
+
+    useEffect(() => {
+      if (inView) {
+        controls.start("visible")
+      }
+    }, [controls, inView])
+
+    return { ref, controls, inView }
+  }
+
+  // Refs for each section
+  const heroAnimation = useScrollAnimation()
+  const logoAnimation = useScrollAnimation()
+  const productsAnimation = useScrollAnimation()
+  const storeMapAnimation = useScrollAnimation()
+  const aboutAnimation = useScrollAnimation()
 
   return (
     <div className="min-h-screen bg-white text-black overflow-clip">
       <NavBar />
-      <div
-        className="bg-no-repeat bg-fit"
-        style={{ backgroundImage: "url(/fundo.png)" }}
-      >
+      <div className="bg-no-repeat bg-fit" style={{ backgroundImage: "url(/fundo.png)" }}>
         <main className="container mx-auto px-4 py-12 ">
           {/* Hero section */}
-
-          <section className="mb-16">
+          <motion.section
+            ref={heroAnimation.ref}
+            initial="hidden"
+            animate={heroAnimation.controls}
+            variants={fadeIn}
+            className="mb-16"
+          >
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
+              <motion.div variants={fadeIn}>
                 <h1 className="text-4xl md:text-7xl font-bold mb-4 text-center md:text-left text-white">
                   Soluções em Climatização
                 </h1>
@@ -67,21 +105,24 @@ export default function Component() {
                 <div className="md:w-[490px]">
                   <Fale />
                 </div>
-              </div>
-              <div className="aspect-video outline bg-gray-100 rounded-lg overflow-hidden">
-                <div
-                  className="w-full h-full bg-cover bg-center"
-                  style={{ backgroundImage: "url(/teste.webp)" }}
-                ></div>
-              </div>
+              </motion.div>
+              <motion.div variants={fadeIn} className="aspect-video outline bg-gray-100 rounded-lg overflow-hidden">
+                <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url(/teste.webp)" }}></div>
+              </motion.div>
             </div>
-          </section>
+          </motion.section>
 
           {/* Reseller logos section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center text-white">
+          <motion.section
+            ref={logoAnimation.ref}
+            initial="hidden"
+            animate={logoAnimation.controls}
+            variants={staggerContainer}
+            className="mb-16"
+          >
+            <motion.h2 variants={fadeIn} className="text-3xl font-bold mb-8 text-center text-white">
               Revenda Oficial das maiores do mercado
-            </h2>
+            </motion.h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
                 { src: "/fuji.png", alt: "Fuji Logo" },
@@ -89,31 +130,39 @@ export default function Component() {
                 { src: "/gree.png", alt: "Gree Logo" },
                 { src: "/midea-logo.png", alt: "Midea Logo" },
               ].map((logo, index) => (
-                <div
+                <motion.div
                   key={index}
+                  variants={fadeIn}
                   className="bg-white p-4 rounded-lg shadow-md flex items-center justify-center"
                 >
                   <Image
-                    src={logo.src}
+                    src={logo.src || "/placeholder.svg"}
                     alt={logo.alt}
                     width={160}
                     height={80}
                     className="max-w-full h-auto"
                   />
-                </div>
+                </motion.div>
               ))}
             </div>
-          </section>
+          </motion.section>
 
-          {/* Products section with updated SVG icons and WhatsApp links */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center">
+          {/* Products section */}
+          <motion.section
+            ref={productsAnimation.ref}
+            initial="hidden"
+            animate={productsAnimation.controls}
+            variants={staggerContainer}
+            className="mb-16"
+          >
+            <motion.h2 variants={fadeIn} className="text-3xl font-bold mb-8 text-center">
               Nossos Produtos
-            </h2>
+            </motion.h2>
             <div className="grid md:grid-cols-2 gap-8">
               {products.map((product, index) => (
-                <a
+                <motion.a
                   key={index}
+                  variants={fadeIn}
                   href="https://api.whatsapp.com/send?phone=556593333739"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -123,100 +172,102 @@ export default function Component() {
                 >
                   <Card className="text-center hover:shadow-lg transition-shadow">
                     <CardContent className="p-6">
-                      <div className="w-16 h-16 mx-auto mb-4">
-                        {product.icon}
-                      </div>
-                      <h2 className="text-xl font-semibold mb-2">
-                        {product.name}
-                      </h2>
+                      <div className="w-16 h-16 mx-auto mb-4">{product.icon}</div>
+                      <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
                       <p className="text-gray-600">
-                        Oferecemos uma ampla gama de{" "}
-                        {product.name.toLowerCase()} para atender às suas
-                        necessidades de climatização.
+                        Oferecemos uma ampla gama de {product.name.toLowerCase()} para atender às suas necessidades de
+                        climatização.
                       </p>
                     </CardContent>
                   </Card>
                   {hoveredCard === index && (
                     <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 p-2 bg-black text-white rounded shadow-lg flex items-center">
                       <div className="w-8">
-                        <svg
-                          className="w-6"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                          fill="white"
-                        >
+                        <svg className="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="white">
                           <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
                         </svg>
                       </div>
                       <span>Fale conosco no WhatsApp</span>
                     </div>
                   )}
-                </a>
+                </motion.a>
               ))}
             </div>
-          </section>
-          <section className="my-20" id="3">
-            <div className="bg-[#022e5e] p-10 rounded-lg z-40"> <div>
-            <h2 className="text-3xl font-bold mb-8 text-center text-white">Nossas Lojas</h2>
-              <StoreMap />
-            </div></div>
-          </section>
-          <section className="mb-16" id="2">
-            <h2 className="text-3xl font-bold mb-8 text-center">Sobre Nós</h2>
-            <div className="space-y-8">
-              <div className="prose max-w-none">
-                <p className="text-justify">
-                  Fundada em 14 de outubro de 2003 por Claudio Zafalon e seu
-                  filho Claudio Zafalon Filho, a Duzzi Climatização nasceu para
-                  atender uma necessidade crescente de soluções térmicas e de
-                  climatização no mercado. Com o passar dos anos, a empresa se
-                  consolidou como uma referência no setor, oferecendo uma ampla
-                  gama de produtos e serviços.
-                </p>
-                <p className="text-justify mt-2">
-                  Especializamos-nos na venda de ar condicionado e materiais
-                  para sua instalação, além de peças para máquinas de lavar,
-                  climatizadores a base d'água, câmaras frias, peças e materiais
-                  para manutenção de geladeiras e freezers, e diversas
-                  ferramentas. Trabalhamos com marcas renomadas como Age Therm,
-                  Alado, Amatools, Aquabios, Black & Decker, Bosch, Braskoki,
-                  Brastemp, Consul, Controlbox, Copeland, CP Placas, Danfoss,
-                  Day Brasil, Electrolux, Elgin, Elitech, Embraco, Emicol, EOS,
-                  Extruflex, Famabras, Foxlux, Fujitsu, Full Gauge, Gree,
-                  Hulter, Indusat, JRC Diamantados, K11, Leco do Brasil,
-                  Mastercool, Midea, Migrare, Minipa, MOR, Performance Ind.,
-                  Quimital, Springer Carrier, Suryha, Tecumseh, Tectape, Testo
-                  do Brasil, Trineva, Uni Refrigeração, Vathisa e Vulkan.
-                </p>
-                <p className="text-justify mt-2">
-                  Contamos com mais de 80 funcionários dedicados, e somos uma
-                  empresa familiar que valoriza profundamente o atendimento ao
-                  cliente. Nossos vendedores possuem amplo conhecimento técnico,
-                  garantindo um atendimento ágil e sem complicações. Nos
-                  orgulhamos de oferecer preços competitivos e um serviço
-                  especializado e humanizado.
-                </p>
-                <p className="text-justify mt-2">
-                  A Duzzi Climatização já foi reconhecida pela Midea Carrier
-                  como exemplo de parceiro da marca, evidenciando nosso
-                  compromisso com a qualidade e a excelência. Atendemos
-                  principalmente técnicos de refrigeração, mas também oferecemos
-                  nossas soluções para a população em geral. Começamos com uma
-                  pequena loja e hoje temos 10 pontos de venda espalhados pelo
-                  Mato Grosso, com a tendência de crescer cada vez mais.
-                </p>
-                <p className="text-justify mt-2">
-                  Nosso objetivo é continuar expandindo, sempre buscando
-                  aprimorar nosso atendimento e oferecer as melhores soluções
-                  para nossos clientes. Venha nos conhecer e descubra por que a
-                  Duzzi Climatização é a escolha certa para suas necessidades de
-                  climatização e refrigeração.
-                </p>
+          </motion.section>
+
+          {/* Store map section */}
+          <motion.section
+            ref={storeMapAnimation.ref}
+            initial="hidden"
+            animate={storeMapAnimation.controls}
+            variants={fadeIn}
+            className="my-20"
+            id="3"
+          >
+            <div className="bg-[#022e5e] p-10 rounded-lg z-40">
+              <div>
+                <motion.h2 variants={fadeIn} className="text-3xl font-bold mb-8 text-center text-white">
+                  Nossas Lojas
+                </motion.h2>
+                <StoreMap />
               </div>
-              <div className="grid grid-cols-3 gap-4">
+            </div>
+          </motion.section>
+
+          {/* About section */}
+          <motion.section
+            ref={aboutAnimation.ref}
+            initial="hidden"
+            animate={aboutAnimation.controls}
+            variants={staggerContainer}
+            className="mb-16"
+            id="2"
+          >
+            <motion.h2 variants={fadeIn} className="text-3xl font-bold mb-8 text-center">
+              Sobre Nós
+            </motion.h2>
+            <div className="space-y-8">
+              <motion.div variants={fadeIn} className="prose max-w-none">
+                <p className="text-justify">
+                  Fundada em 14 de outubro de 2003 por Claudio Zafalon e seu filho Claudio Zafalon Filho, a Duzzi
+                  Climatização nasceu para atender uma necessidade crescente de soluções térmicas e de climatização no
+                  mercado. Com o passar dos anos, a empresa se consolidou como uma referência no setor, oferecendo uma
+                  ampla gama de produtos e serviços.
+                </p>
+                <p className="text-justify mt-2">
+                  Especializamos-nos na venda de ar condicionado e materiais para sua instalação, além de peças para
+                  máquinas de lavar, climatizadores a base d'água, câmaras frias, peças e materiais para manutenção de
+                  geladeiras e freezers, e diversas ferramentas. Trabalhamos com marcas renomadas como Age Therm, Alado,
+                  Amatools, Aquabios, Black & Decker, Bosch, Braskoki, Brastemp, Consul, Controlbox, Copeland, CP
+                  Placas, Danfoss, Day Brasil, Electrolux, Elgin, Elitech, Embraco, Emicol, EOS, Extruflex, Famabras,
+                  Foxlux, Fujitsu, Full Gauge, Gree, Hulter, Indusat, JRC Diamantados, K11, Leco do Brasil, Mastercool,
+                  Midea, Migrare, Minipa, MOR, Performance Ind., Quimital, Springer Carrier, Suryha, Tecumseh, Tectape,
+                  Testo do Brasil, Trineva, Uni Refrigeração, Vathisa e Vulkan.
+                </p>
+                <p className="text-justify mt-2">
+                  Contamos com mais de 80 funcionários dedicados, e somos uma empresa familiar que valoriza
+                  profundamente o atendimento ao cliente. Nossos vendedores possuem amplo conhecimento técnico,
+                  garantindo um atendimento ágil e sem complicações. Nos orgulhamos de oferecer preços competitivos e um
+                  serviço especializado e humanizado.
+                </p>
+                <p className="text-justify mt-2">
+                  A Duzzi Climatização já foi reconhecida pela Midea Carrier como exemplo de parceiro da marca,
+                  evidenciando nosso compromisso com a qualidade e a excelência. Atendemos principalmente técnicos de
+                  refrigeração, mas também oferecemos nossas soluções para a população em geral. Começamos com uma
+                  pequena loja e hoje temos 10 pontos de venda espalhados pelo Mato Grosso, com a tendência de crescer
+                  cada vez mais.
+                </p>
+                <p className="text-justify mt-2">
+                  Nosso objetivo é continuar expandindo, sempre buscando aprimorar nosso atendimento e oferecer as
+                  melhores soluções para nossos clientes. Venha nos conhecer e descubra por que a Duzzi Climatização é a
+                  escolha certa para suas necessidades de climatização e refrigeração.
+                </p>
+              </motion.div>
+              <motion.div variants={staggerContainer} className="grid grid-cols-3 gap-4">
                 {[1, 2, 3].map((num) => (
-                  <div
+                  <motion.div
                     key={num}
+                    variants={fadeIn}
                     className="aspect-square bg-gray-200 rounded-lg overflow-hidden"
                   >
                     <Image
@@ -226,14 +277,15 @@ export default function Component() {
                       height={300}
                       className="w-full h-full object-cover"
                     />
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </div>
-          </section>
+          </motion.section>
         </main>
       </div>
       <Footer />
     </div>
-  );
+  )
 }
+
