@@ -57,7 +57,7 @@ export function LojaContent() {
                 </CarouselItem>
                 <CarouselItem>
                   <Image
-                    src="/porto2.jpg"
+                    src="/vg2.jpg"
                     alt={`Interior da ${loja.nome} - Imagem 2`}
                     width={400}
                     height={300}

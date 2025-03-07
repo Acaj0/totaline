@@ -114,7 +114,7 @@ const stores: Store[] = [
     phone: "(65) 3212-3100",
     city: "lucas do rio verde",
     coordinates: [-13.072017482372758, -55.91279189287434],
-    image: "/campoverde1.jpeg",
+    image: "/lucas1.jpg",
     url: "/lojas/lucas-do-rio-verde",
   },
 ];
