@@ -1,9 +1,8 @@
 "use client";
 import { useState } from "react";
 import dynamic from "next/dynamic";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Image from "next/image";
-import { AspectRatio } from "./ui/aspect-ratio";
+import Link from "next/link";
+import { MapPin, ArrowRight } from "lucide-react";
 
 export interface Store {
   id: string;
@@ -92,7 +91,7 @@ const stores: Store[] = [
     name: "Duzzi Totaline - Campo Verde",
     address: "Av. Sen Antônio Fobtana S/N Jardim C. verde, Campo Verde - MT",
     phone: "(66) 99982-2726",
-    city: "Primavera do Leste",
+    city: "Campo Verde",
     coordinates: [-15.548837399999986, -55.16331222883544],
     image: "/campoverde1.jpeg",
     url: "/lojas/campo-verde",
@@ -102,7 +101,7 @@ const stores: Store[] = [
     name: "Duzzi Totaline - Coxipó",
     address: "BR-364, 1093 - Jardim Passaredo, Cuiabá - MT",
     phone: "(65) 3623-8260",
-    city: "Cuiaba",
+    city: "Cuiabá",
     coordinates: [-15.645255613335618, -56.010008415339954],
     image: "/campoverde1.jpeg",
     url: "/lojas/coxipo",
@@ -112,7 +111,7 @@ const stores: Store[] = [
     name: "Duzzi Totaline - Lucas do Rio Verde",
     address: "Av. Santa Catarina, 90e - Cidade Nova, Lucas do Rio Verde - MT",
     phone: "(65) 3212-3100",
-    city: "lucas do rio verde",
+    city: "Lucas do Rio Verde",
     coordinates: [-13.072017482372758, -55.91279189287434],
     image: "/lucas1.jpg",
     url: "/lojas/lucas-do-rio-verde",
@@ -128,57 +127,79 @@ export default function StoreMap() {
   const [activeStore, setActiveStore] = useState<Store>(stores[0]);
 
   return (
-    <div className="flex flex-col lg:flex-row w-full  gap-4 z-40">
-      <div className="w-full lg:w-2/3 h-[400px] lg:h-[740px]">
+    <div className="flex flex-col lg:flex-row w-full gap-4 z-10">
+      <div className="hidden lg:block lg:w-2/3 h-[740px]">
         <ClientMap
           stores={stores}
           activeStore={activeStore}
           setActiveStore={setActiveStore}
         />
       </div>
-      <div className="w-full lg:w-1/3">
-        <Card >
-          <CardHeader>
-            <CardTitle>{activeStore.name}</CardTitle>
-          </CardHeader>
-          <CardContent>
+      <div className="w-full lg:w-1/3 flex flex-col gap-4 h-[440px] lg:h-[740px]">
+        {/* Store list */}
+        <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex-1 min-h-0 flex flex-col">
+          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide px-4 pt-4 pb-2">
+            Escolha uma loja
+          </p>
+          <div className="overflow-y-auto no-scrollbar divide-y divide-border/60 flex-1">
+            {stores.map((store) => (
+              <button
+                key={store.id}
+                onClick={() => setActiveStore(store)}
+                className={`w-full text-left px-4 py-3 flex items-center gap-3 transition-colors ${
+                  activeStore.id === store.id
+                    ? "bg-brand-navy/5"
+                    : "hover:bg-secondary/60"
+                }`}
+              >
+                <span
+                  className={`h-2 w-2 rounded-full shrink-0 ${
+                    activeStore.id === store.id ? "bg-brand-red" : "bg-border"
+                  }`}
+                />
+                <span className="min-w-0">
+                  <span
+                    className={`block text-sm truncate ${
+                      activeStore.id === store.id
+                        ? "font-semibold text-brand-navy"
+                        : "font-medium text-foreground/80"
+                    }`}
+                  >
+                    {store.name.replace("Duzzi Totaline - ", "")}
+                  </span>
+                  <span className="block text-xs text-muted-foreground truncate">{store.city}</span>
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Active store card — whole card links straight to the store page */}
+        <Link
+          href={activeStore.url}
+          className="group bg-white rounded-2xl shadow-lg overflow-hidden block shrink-0"
+        >
+          <div className="relative">
             <img
               src={activeStore.image}
               alt={activeStore.name}
-              className="w-full h-48 object-cover rounded-md mb-4"
+              className="w-full h-36 object-cover"
             />
-            <p className="text-xs text-gray-600 mb-2 text-clip">{activeStore.address}</p>
-            <p className="text-sm font-semibold">{activeStore.phone}</p>
-            <a
-              href={activeStore.url}
-              className="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
-            >
-              Ver detalhes
-            </a>
-          </CardContent>
-        </Card>
-        <Card className="w-full max-w-md mx-auto overflow-hidden mt-2">
-          <CardHeader className="p-1">
-            <AspectRatio ratio={12/ 4}>
-              <Image
-                src="/mt.jpg"
-                alt="Bandeira do Mato Grosso"
-                width={400}
-                height={200}
-                className="w-full h-full object-cover"
-              />
-            </AspectRatio>
-          </CardHeader>
-          <CardContent className="p-6">
-            <CardTitle className="text-2xl font-bold mb-4 text-center">
-              A maior do Mato Grosso!
-            </CardTitle>
-            <p className="text-center">
-              A Duzzi Totaline é líder no estado, oferecendo as melhores
-              soluções em refrigeração e climatização com qualidade e confiança.
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+            <p className="absolute bottom-2 left-4 right-4 text-white font-semibold text-sm">
+              {activeStore.name}
             </p>
-          </CardContent>
-        </Card>
+          </div>
+          <div className="p-4">
+            <p className="flex items-start gap-2 text-xs text-muted-foreground mb-3">
+              <MapPin className="h-3.5 w-3.5 mt-0.5 shrink-0" />
+              {activeStore.address}
+            </p>
+            <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-navy group-hover:text-brand-red transition-colors">
+              Ver loja completa <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
+            </span>
+          </div>
+        </Link>
       </div>
     </div>
   );

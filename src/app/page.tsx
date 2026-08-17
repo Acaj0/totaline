@@ -6,9 +6,11 @@ import NavBar from "@/components/NavBar"
 import StoreMap from "@/components/store-map"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
+import Link from "next/link"
 import { useState, useEffect } from "react"
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer"
+import { ArrowRight } from "lucide-react"
 
 export default function Component() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
@@ -102,12 +104,33 @@ export default function Component() {
                 <p className="text-xl text-gray-300 mb-8 text-center md:text-left">
                   A maior loja de refrigeração do estado!
                 </p>
-                <div className="md:w-[490px]">
+                <div className="md:w-[490px] flex flex-col items-center md:items-start gap-5">
                   <Fale />
                 </div>
               </motion.div>
-              <motion.div variants={fadeIn} className="aspect-video outline bg-gray-100 rounded-lg overflow-hidden">
-                <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: "url(/teste.webp)" }}></div>
+              <motion.div variants={fadeIn} className="relative">
+                <div
+                  className="absolute -inset-6 rounded-[2.5rem] bg-brand-red/30 blur-3xl opacity-60"
+                  aria-hidden
+                />
+                <div className="relative aspect-video rounded-[2rem] overflow-hidden shadow-2xl shadow-black/50 ring-1 ring-white/10 bg-brand-navy">
+                  <Image
+                    src="/teste-optimized.webp"
+                    alt="Ar-condicionado instalado pela Duzzi Totaline"
+                    fill
+                    priority
+                    unoptimized
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/50 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 md:right-auto md:max-w-[280px] bg-white/90 backdrop-blur rounded-xl p-4 shadow-lg">
+                    <p className="font-bold text-brand-navy text-sm mb-1">A maior do Mato Grosso!</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      Líder no estado em soluções de refrigeração e climatização.
+                    </p>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </motion.section>
@@ -145,6 +168,14 @@ export default function Component() {
                 </motion.div>
               ))}
             </div>
+            <motion.div variants={fadeIn} className="text-center mt-8">
+              <Link
+                href="/parceiros"
+                className="inline-flex items-center gap-1.5 text-white font-semibold hover:text-brand-red transition-colors"
+              >
+                Ver todos os parceiros <ArrowRight className="h-4 w-4" />
+              </Link>
+            </motion.div>
           </motion.section>
 
           {/* Products section */}
@@ -204,17 +235,25 @@ export default function Component() {
             className="my-20"
             id="3"
           >
-            <div className="bg-[#022e5e] p-10 rounded-lg z-40">
+            <div className="bg-brand-navy p-6 md:p-10 rounded-2xl z-10">
               <div>
                 <motion.h2 variants={fadeIn} className="text-3xl font-bold mb-8 text-center text-white">
                   Nossas Lojas
                 </motion.h2>
                 <StoreMap />
+                <motion.div variants={fadeIn} className="text-center mt-8">
+                  <Link
+                    href="/mapa"
+                    className="inline-flex items-center gap-1.5 text-white font-semibold hover:text-brand-red transition-colors"
+                  >
+                    Ver mapa completo <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </motion.div>
               </div>
             </div>
           </motion.section>
 
-          {/* About section */}
+          {/* About preview section */}
           <motion.section
             ref={aboutAnimation.ref}
             initial="hidden"
@@ -223,62 +262,35 @@ export default function Component() {
             className="mb-16"
             id="2"
           >
-            <motion.h2 variants={fadeIn} className="text-3xl font-bold mb-8 text-center">
-              Sobre Nós
-            </motion.h2>
-            <div className="space-y-8">
-              <motion.div variants={fadeIn} className="prose max-w-none">
-                <p className="text-justify">
-                  Fundada em 14 de outubro de 2003 por Claudio Zafalon e seu filho Claudio Zafalon Filho, a Duzzi
-                  Climatização nasceu para atender uma necessidade crescente de soluções térmicas e de climatização no
-                  mercado. Com o passar dos anos, a empresa se consolidou como uma referência no setor, oferecendo uma
-                  ampla gama de produtos e serviços.
-                </p>
-                <p className="text-justify mt-2">
-                  Especializamos-nos na venda de ar condicionado e materiais para sua instalação, além de peças para
-                  máquinas de lavar, climatizadores a base d'água, câmaras frias, peças e materiais para manutenção de
-                  geladeiras e freezers, e diversas ferramentas. Trabalhamos com marcas renomadas como Age Therm, Alado,
-                  Amatools, Aquabios, Black & Decker, Bosch, Braskoki, Brastemp, Consul, Controlbox, Copeland, CP
-                  Placas, Danfoss, Day Brasil, Electrolux, Elgin, Elitech, Embraco, Emicol, EOS, Extruflex, Famabras,
-                  Foxlux, Fujitsu, Full Gauge, Gree, Hulter, Indusat, JRC Diamantados, K11, Leco do Brasil, Mastercool,
-                  Midea, Migrare, Minipa, MOR, Performance Ind., Quimital, Springer Carrier, Suryha, Tecumseh, Tectape,
-                  Testo do Brasil, Trineva, Uni Refrigeração, Vathisa e Vulkan.
-                </p>
-                <p className="text-justify mt-2">
-                  Contamos com mais de 80 funcionários dedicados, e somos uma empresa familiar que valoriza
-                  profundamente o atendimento ao cliente. Nossos vendedores possuem amplo conhecimento técnico,
-                  garantindo um atendimento ágil e sem complicações. Nos orgulhamos de oferecer preços competitivos e um
-                  serviço especializado e humanizado.
-                </p>
-                <p className="text-justify mt-2">
-                  A Duzzi Climatização já foi reconhecida pela Midea Carrier como exemplo de parceiro da marca,
-                  evidenciando nosso compromisso com a qualidade e a excelência. Atendemos principalmente técnicos de
-                  refrigeração, mas também oferecemos nossas soluções para a população em geral. Começamos com uma
-                  pequena loja e hoje temos 10 pontos de venda espalhados pelo Mato Grosso, com a tendência de crescer
-                  cada vez mais.
-                </p>
-                <p className="text-justify mt-2">
-                  Nosso objetivo é continuar expandindo, sempre buscando aprimorar nosso atendimento e oferecer as
-                  melhores soluções para nossos clientes. Venha nos conhecer e descubra por que a Duzzi Climatização é a
-                  escolha certa para suas necessidades de climatização e refrigeração.
-                </p>
+            <div className="grid md:grid-cols-2 gap-10 items-center bg-white rounded-2xl p-6 md:p-10 shadow-sm">
+              <motion.div
+                variants={fadeIn}
+                className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 md:order-1 bg-gradient-to-br from-brand-navy-light to-brand-navy flex items-center justify-center p-10"
+              >
+                <Image
+                  src="/duzzi-branca.png"
+                  alt="Duzzi Totaline Climatização e Refrigeração"
+                  width={480}
+                  height={252}
+                  className="w-full max-w-[320px] h-auto"
+                />
               </motion.div>
-              <motion.div variants={staggerContainer} className="grid grid-cols-3 gap-4">
-                {[1, 2, 3].map((num) => (
-                  <motion.div
-                    key={num}
-                    variants={fadeIn}
-                    className="aspect-square bg-gray-200 rounded-lg overflow-hidden"
-                  >
-                    <Image
-                      src={`/foto${num === 1 ? "" : num}.jpeg`}
-                      alt={`Sobre Nós Imagem ${num}`}
-                      width={300}
-                      height={300}
-                      className="w-full h-full object-cover"
-                    />
-                  </motion.div>
-                ))}
+              <motion.div variants={fadeIn} className="order-1 md:order-2">
+                <p className="text-brand-red font-semibold tracking-wide uppercase text-sm mb-3">
+                  Nossa história
+                </p>
+                <h2 className="text-3xl font-bold mb-4 text-brand-navy">Sobre Nós</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Fundada em 14 de outubro de 2003 por Claudio Zafalon e seu filho Claudio Zafalon
+                  Filho, a Duzzi Climatização nasceu para atender uma necessidade crescente de
+                  soluções térmicas e de climatização no mercado.
+                </p>
+                <Link
+                  href="/sobre"
+                  className="inline-flex items-center gap-1.5 mt-6 text-brand-navy font-semibold hover:text-brand-red transition-colors"
+                >
+                  Conheça nossa história completa <ArrowRight className="h-4 w-4" />
+                </Link>
               </motion.div>
             </div>
           </motion.section>

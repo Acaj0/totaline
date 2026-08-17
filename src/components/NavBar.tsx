@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import {
   SheetContent,
@@ -9,95 +10,93 @@ import {
   Sheet,
 } from "./ui/sheet";
 import { Button } from "./ui/button";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
-import { Parceiros } from "./Parceiros";
+
+const navLinks = [
+  { href: "/mapa", label: "Lojas" },
+  { href: "/sobre", label: "Sobre Nós" },
+  { href: "/parceiros", label: "Parceiros" },
+];
 
 export default function NavBar() {
   return (
-    <div className="">
-      <div className="mx-auto bg-white h-16 flex md:hidden justify-between items-center p-2">
-        <a href="/">
-          <div className="w-[80px]">
+    <div>
+      {/* Mobile */}
+      <div className="mx-auto bg-white h-16 flex md:hidden justify-between items-center px-4 border-b border-border/60">
+        <Link href="/">
+          <div className="w-[64px]">
             <AspectRatio ratio={6 / 4}>
               <Image
                 src="/duzzi_climatiza.jpeg"
                 fill
-                sizes="(max-width: 768px) 80px, 130px"
+                sizes="64px"
                 quality={95}
                 priority={true}
                 alt="logo do site"
                 className="rounded-md"
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: "cover" }}
                 placeholder="blur"
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAECEf/aAAwDAQACEQMRAD8AoNxbhL3xvpeNluNyeQ0pwCxJGwA5NFE9fqU+s5+0pr//2Q=="
               />
             </AspectRatio>
           </div>
-        </a>
-        <h1 className="italic text-xl text-black"></h1> <MobileNav />{" "}
+        </Link>
+        <MobileNav />
       </div>
 
-      <header className="hidden sticky top-0 z-50  bg-white h-24 md:flex justify-center items-center gap-20 text-xl text-black">
-        <div className="container justify-center">
-          <div className="hidden bg-white h-24 w-full md:flex justify-between gap items-center text-xl text-black">
-            <a href="/">
-              <div className="w-[130px]">
-                <AspectRatio ratio={6 / 4}>
-                  <Image
-                    src="/duzzi_climatiza.jpeg"
-                    fill
-                    sizes="(max-width: 768px) 80px, 130px"
-                    quality={95}
-                    priority={true}
-                    alt="logo da loja"
-                    className="rounded-md"
-                    style={{ objectFit: 'cover' }}
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAECEf/aAAwDAQACEQMRAD8AoNxbhL3xvpeNluNyeQ0pwCxJGwA5NFE9fqU+s5+0pr//2Q=="
-                  />
-                </AspectRatio>
-              </div>
-            </a>
-            <div className="flex items-center justify-center gap-10">
-              <a
-                className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-2xl hover:text-blue-800 font-semibold"
-                href="/#3"
-              >
-                Lojas
-              </a>
-              <a
-                className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-2xl hover:text-blue-800 font-semibold"
-                href="#2"
-              >
-                Nossa Historia
-              </a>
-              <span className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 text-2xl hover:text-blue-800 font-semibold">
-                <Parceiros></Parceiros>
-              </span>
+      {/* Desktop */}
+      <header className="hidden sticky top-0 z-50 bg-white/95 backdrop-blur h-20 md:flex justify-center items-center border-b border-border/60">
+        <div className="container mx-auto px-4 flex justify-between items-center">
+          <Link href="/">
+            <div className="w-[110px]">
+              <AspectRatio ratio={6 / 4}>
+                <Image
+                  src="/duzzi_climatiza.jpeg"
+                  fill
+                  sizes="110px"
+                  quality={95}
+                  priority={true}
+                  alt="logo da loja"
+                  className="rounded-md"
+                  style={{ objectFit: "cover" }}
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAECEf/aAAwDAQACEQMRAD8AoNxbhL3xvpeNluNyeQ0pwCxJGwA5NFE9fqU+s5+0pr//2Q=="
+                />
+              </AspectRatio>
             </div>
-          </div>
+          </Link>
+          <nav className="flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-[15px] font-semibold text-foreground/80 hover:text-brand-red transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              href="https://api.whatsapp.com/send?phone=556593333739"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-semibold bg-brand-navy hover:bg-brand-navy-light text-white px-5 py-2.5 rounded-lg transition-colors"
+            >
+              Fale conosco
+            </Link>
+          </nav>
         </div>
       </header>
     </div>
   );
 }
+
 const MobileNav = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button size="icon" name="menu">
+        <Button size="icon" variant="ghost" name="menu">
           <svg
-            width="25"
-            height="25"
+            width="22"
+            height="22"
             viewBox="0 0 15 15"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -112,17 +111,30 @@ const MobileNav = () => {
         </Button>
       </SheetTrigger>
       <SheetContent>
-        <div className="mt-10 flex flex-col gap-6 text-base font-semibold z-50">
-          <a href="#1">Inicio</a>
-          <a className=" hover:text-blue-800" href="#2">
-            Sobre Nós
-          </a>
-          <a className=" hover:text-blue-800" href="/#3">
-            Lojas
-          </a>
-          <span className=" hover:text-blue-800 ">
-            <Parceiros></Parceiros>
-          </span>
+        <SheetHeader>
+          <SheetTitle className="text-left">Menu</SheetTitle>
+        </SheetHeader>
+        <div className="mt-8 flex flex-col gap-1 text-base font-semibold">
+          <Link className="py-2.5 hover:text-brand-red transition-colors" href="/">
+            Início
+          </Link>
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              className="py-2.5 hover:text-brand-red transition-colors"
+              href={link.href}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href="https://api.whatsapp.com/send?phone=556593333739"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 text-center bg-brand-navy text-white px-5 py-3 rounded-lg"
+          >
+            Fale conosco
+          </Link>
         </div>
       </SheetContent>
     </Sheet>

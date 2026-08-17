@@ -1,56 +1,25 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet'
-import L from 'leaflet'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
-import { Store } from './mainmapmatriz'
+import { duzziIcon, MAP_TILE_URL, MAP_TILE_ATTRIBUTION } from '@/lib/leaflet-icon'
 
-function ChangeView({ center }: { center: [number, number] }) {
-  const map = useMap()
-  map.setView(center, map.getZoom())
-  return null
+interface ClientMap2Props {
+  name: string
+  coordinates: [number, number]
 }
 
-interface ClientMapProps {
-  stores: Store[]
-  activeStore: Store
-  setActiveStore: (store: Store) => void
-}
-
-export default function ClientMap2({ stores, activeStore, setActiveStore }: ClientMapProps) {
-  const [mapCenter, setMapCenter] = useState<[number, number]>(activeStore.coordinates)
-
-  useEffect(() => {
-    (async function init() {
-      delete (L.Icon.Default.prototype as any)._getIconUrl
-      L.Icon.Default.mergeOptions({
-        iconRetinaUrl: '/leaflet/marker-icon-2x.png',
-        iconUrl: '/leaflet/marker-icon.png',
-        shadowUrl: '/leaflet/marker-shadow.png',
-      })
-    })()
-  }, [])
-
+export default function ClientMap2({ name, coordinates }: ClientMap2Props) {
   return (
-    <MapContainer center={mapCenter} zoom={13} style={{ height: '100%', width: '100%', borderRadius: '10px'}} className='z-40'>
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      />
-      {stores.map((store) => (
-        <Marker
-          key={store.id}
-          position={store.coordinates}
-          eventHandlers={{
-            click: () => {
-              setActiveStore(store)
-              setMapCenter(store.coordinates)
-            },
-          }}
-        />
-      ))}
-      <ChangeView center={mapCenter} />
+    <MapContainer center={coordinates} zoom={15} style={{ height: '100%', width: '100%', borderRadius: '1rem' }} className="z-10">
+      <TileLayer url={MAP_TILE_URL} attribution={MAP_TILE_ATTRIBUTION} />
+      <Marker position={coordinates} icon={duzziIcon({ active: true })}>
+        <Popup>
+          <div className="p-3 min-w-[160px]">
+            <p className="font-semibold text-brand-navy text-sm">{name}</p>
+          </div>
+        </Popup>
+      </Marker>
     </MapContainer>
   )
 }
