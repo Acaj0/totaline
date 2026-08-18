@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import {
-  Montserrat,
-  Roboto,
-  Roboto_Condensed,
-  Roboto_Flex,
-} from "next/font/google";
+import { Montserrat, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import WhatsAppButton from "@/components/whatsappbutton";
 
-const roboto = Montserrat({
+const montserrat = Montserrat({
   subsets: ["latin"],
+  variable: "--font-montserrat",
+});
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
 });
 
 export const metadata: Metadata = {
@@ -18,6 +19,13 @@ export const metadata: Metadata = {
     "climatização residencial, instalação de ar-condicionado, manutenção de ar-condicionado, serviços de refrigeração, ar-condicionado split, refrigeração comercial, Cuiabá, limpeza de ar-condicionado, Duzzi Climatização, climatização eficiente, instalação de ar-condicionado em Cuiabá, assistência técnica de ar-condicionado, refrigeração de ambientes, ar-condicionado inverter, climatização industrial",
   description:
     "Duzzi  Totaline Climatização e Refrigeração, A Maior loja de climatização e refrigeração do estado de Mato Grosso!",
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -43,10 +51,8 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* Favicon */}
-        <link rel="icon" href="/duzzi.jpeg" />
       </head>
-      <body className={roboto.className}>
+      <body className={`${jakarta.variable} ${montserrat.variable} font-sans`}>
         <WhatsAppButton />
         <header></header>
         {children}
