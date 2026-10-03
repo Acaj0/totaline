@@ -6,6 +6,8 @@ export function Fale() {
   useEffect(() => {
     const d = new Date();
     const n = d.getUTCHours() + 1; // Hora em UTC
+    const minutes = d.getUTCMinutes();
+    const totalMinutes = n * 60 + minutes;
     const dayOfWeek = d.getDay(); // 0 = domingo, 1 = segunda-feira, 6 = sábado
 
     const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
@@ -14,7 +16,7 @@ export function Fale() {
 
     if (isWeekend) {
       if (dayOfWeek === 6) {
-        nightStatus = !(n >= 12 && n <= 17);
+        nightStatus = !(totalMinutes >= 12 * 60 && totalMinutes < 16 * 60 + 50); // fecha 11h50 (horário local)
       } else {
         nightStatus = true;
       }
