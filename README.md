@@ -7,7 +7,6 @@
 - [Sobre](#sobre)
 - [Tecnologias](#tecnologias)
 - [Instalação](#instalação)
-
 ## Sobre
 
 O Site é uma aplicação desenvolvida para ser uma plataforma de apresentação para a empresa. O objetivo principal do projeto é mostar a empresa e oferecer uma possibilidade de conexão por whatsapp para o cliente.
