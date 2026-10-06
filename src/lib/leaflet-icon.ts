@@ -17,7 +17,6 @@ export function duzziIcon(options?: { active?: boolean }) {
   });
 }
 
-export const MAP_TILE_URL =
-  "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png";
+export const MAP_TILE_URL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
 export const MAP_TILE_ATTRIBUTION =
-  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
+  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
